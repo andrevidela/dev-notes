@@ -1,4 +1,4 @@
-site_name: obsidian-mkdocs template
+site_name: My dev notes
 
 theme:
     name: 'material'
@@ -7,7 +7,7 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: pink
+      primary: purple
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
@@ -16,7 +16,7 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: pink
+      primary: purple
       accent: blue
       toggle:
         icon: material/toggle-switch
@@ -40,4 +40,4 @@ markdown_extensions:
 
 plugins:
   - search
-  - roamlinks 
+  - roamlinks

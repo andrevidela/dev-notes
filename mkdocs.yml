@@ -25,6 +25,7 @@ theme:
 # Extensions
 markdown_extensions:
   - footnotes
+  - mathjax
   # - attr_list
   # - pymdownx.arithmatex
   # - pymdownx.superfences

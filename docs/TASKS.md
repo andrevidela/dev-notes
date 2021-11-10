@@ -39,6 +39,14 @@ inherit the number of the project they belong to.
       - [x] 6.5.1 run locally -- doesn't work (10.11.2021)
       - [ ] 6.5.2 see if we can interpret LogIO into the node JS server
 
+# 7 Data generic programming
+  - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)
+  - [x] 7.2 implement in terms of typedefs (10.11.2021)
+        NOTE: didn't work because typedefs are broken
+  - [ ] 7.3 write the blog post about CFT
+  - [ ] 7.5 write the blog post about SplitN
+  - [ ] 7.6 write blog post about Zippers
+
 # Done:
 - [x] fix the injection PR (10.11.2021)
 - [x] fix the parser PR (10.11.2021)

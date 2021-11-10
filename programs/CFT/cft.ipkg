@@ -1,0 +1,9 @@
+package cft
+
+-- modules to install
+modules = CFT
+        , CFT.Splits
+        , CFT.Datatypes
+        , CFT.Zippers
+
+sourcedir = "src"

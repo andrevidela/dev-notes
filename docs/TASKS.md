@@ -37,7 +37,8 @@ inherit the number of the project they belong to.
   - [ ] 6.4 implement the dep-lens EDSL
   - [ ] 6.5 try out idris-server http server project
       - [x] 6.5.1 run locally -- doesn't work (10.11.2021)
-      - [ ] 6.5.2 see if we can interpret LogIO into the node JS server
+      - [ ] 6.5.2 Perform the suggested fixes from discord
+      - [ ] 6.5.3 see if we can interpret LogIO into the node JS server
 
 # 7 Data generic programming
   - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)

@@ -3,3 +3,4 @@
 *.ttm
 build/
 *.idr~
+docs/.obsidian/

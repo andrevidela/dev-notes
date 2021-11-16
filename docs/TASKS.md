@@ -20,7 +20,12 @@ inherit the number of the project they belong to.
   - [ ] 3.5 Add Bools 
         NOTE: Important for if-then-else
   - [ ] 3.6 Write tests
-  - [ ] 3.7 Add grades
+    - [x] 3.6.1 Write parser tests (15.11.2021)
+    - [ ] 3.6.1 Write compiler tests 
+  - [ ] 3.7 Add grades 
+    - [x] 3.7.1 fix typechecker (16.11.2021)
+    - [ ] 3.7.2 fix subst 
+    - [ ] 3.7.3 fix Quoting 
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
@@ -64,9 +69,12 @@ inherit the number of the project they belong to.
   - [ ] 7.6 write blog post about Zippers
 
 # 8 Idris proefficiency tutorial
-  - [x] 8.1 collect funtions from last AOC
+  - [x] 8.1 collect funtions from last AOC (14.11.2021)
   - [ ] 8.2 store helper functions in a library
-    - [ ] 8.2.1 write documentation for functions
+    - [x] 8.2.1 queues and zippers (16.11.2021)
+    - [ ] 8.2.2 n-dimensional spaces
+    - [ ] 8.2.3 binary manipulation
+    - [ ] 8.2.4 Cryptography
   - [ ] 8.3 write about data types
   - [ ] 8.4 write about IO
   - [ ] 8.5 write about common functions

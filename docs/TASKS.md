@@ -7,15 +7,20 @@ inherit the number of the project they belong to.
 # Mailbox :
 
 - [ ] install LSP
+- [ ] fix the PR about injection
 
 # Projects :
 
 ## 3 Myrmidon language
-  - [ ] 3.1 finish the parser
-  - [ ] 3.2 add Nat
+  - [x] 3.1 finish the parser (15.11.2021)
+  - [x] 3.2 add Nat (14.11.2021)
   - [ ] 3.3 Add Vect
-  - [ ] 3.4 Write tests
-  - [ ] 3.5 Add grades
+  - [ ] 3.4 Add Fins
+        NOTE: Important for indexing vectors
+  - [ ] 3.5 Add Bools 
+        NOTE: Important for if-then-else
+  - [ ] 3.6 Write tests
+  - [ ] 3.7 Add grades
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
@@ -33,7 +38,6 @@ inherit the number of the project they belong to.
               the states are the products of the state of the lines
   - [ ]  5.4 Port the preprocessor to the updated version
   - [ ]  5.5 Write installation instructions for the haskell version
-  - [ ]  5.6 Write the usage tutorial for use in Papillion
 
 ## 6 Open-Servers
   - [x] 6.1 port the core logic to indexed paths
@@ -60,7 +64,7 @@ inherit the number of the project they belong to.
   - [ ] 7.6 write blog post about Zippers
 
 # 8 Idris proefficiency tutorial
-  - [ ] 8.1 collect funtions from last AOC
+  - [x] 8.1 collect funtions from last AOC
   - [ ] 8.2 store helper functions in a library
     - [ ] 8.2.1 write documentation for functions
   - [ ] 8.3 write about data types

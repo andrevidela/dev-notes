@@ -24,8 +24,12 @@ inherit the number of the project they belong to.
     - [ ] 3.6.1 Write compiler tests 
   - [ ] 3.7 Add grades 
     - [x] 3.7.1 fix typechecker (16.11.2021)
-    - [ ] 3.7.2 fix subst 
-    - [ ] 3.7.3 fix Quoting 
+    - [x] 3.7.2 fix subst  (17.11.2021)
+    - [x] 3.7.3 fix Quoting  (17.11.2021)
+    - [ ] 3.7.4 Abstract over the grades in context
+  - [ ] 3.6 compile surface syntax into AST
+  - [ ] 3.7 Experiment with compiler passes
+
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons

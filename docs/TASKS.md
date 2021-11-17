@@ -80,6 +80,13 @@ inherit the number of the project they belong to.
   - [ ] 8.5 write about common functions
   - [ ] 8.6 write about syntax
 
+# 9 Graphics
+  - [ ] 9.1 Draw logo for DJSON
+  - [ ] 9.2 Draw logo for myrmidon
+  - [ ] 9.3 Draw logo for Prolude
+  - [ ] 9.4 update logo for Open servers
+  - [ ] 9.5 Draw logo for AOC
+
 # Done:
 - [x] fix the injection PR (10.11.2021)
 - [x] fix the parser PR (10.11.2021)

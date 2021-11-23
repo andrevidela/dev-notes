@@ -7,7 +7,6 @@ inherit the number of the project they belong to.
 # Mailbox :
 
 - [ ] install LSP
-- [ ] fix the PR about injection
 
 # Projects :
 
@@ -29,7 +28,7 @@ inherit the number of the project they belong to.
     - [ ] 3.7.4 Abstract over the grades in context
   - [ ] 3.6 compile surface syntax into AST
   - [ ] 3.7 Experiment with compiler passes
-
+  - [ ] 3.8 Add the funky semiring for both uses and stages
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
@@ -74,15 +73,16 @@ inherit the number of the project they belong to.
 
 # 8 Idris proefficiency tutorial
   - [x] 8.1 collect funtions from last AOC (14.11.2021)
-  - [ ] 8.2 store helper functions in a library
+  - [x] 8.2 store helper functions in a library (23.11.2021)
     - [x] 8.2.1 queues and zippers (16.11.2021)
-    - [ ] 8.2.2 n-dimensional spaces
-    - [ ] 8.2.3 binary manipulation
-    - [ ] 8.2.4 Cryptography
+    - [x] 8.2.2 n-dimensional spaces (23.11.2021)
+    - [x] 8.2.3 binary manipulation (23.11.2021)
+    - [x] 8.2.4 Cryptography (23.11.2021)
   - [ ] 8.3 write about data types
   - [ ] 8.4 write about IO
   - [ ] 8.5 write about common functions
   - [ ] 8.6 write about syntax
+  - [ ] 8.7 write instructions to install and use
 
 # 9 Graphics
   - [ ] 9.1 Draw logo for DJSON
@@ -100,3 +100,4 @@ inherit the number of the project they belong to.
   - [x] 2.5 Check the injectivity pull request
   - [x] 2.6 Finish the dev notes about Idris2
   - [x] 2.7 Write the documentation for string interpolation concat
+- [x] fix the PR about injection (23.11.2021)

@@ -6,7 +6,6 @@ inherit the number of the project they belong to.
 
 # Mailbox :
 
-- [ ] install LSP
 
 # Projects :
 
@@ -16,12 +15,12 @@ inherit the number of the project they belong to.
   - [ ] 3.3 Add Vect
   - [ ] 3.4 Add Fins
         NOTE: Important for indexing vectors
-  - [ ] 3.5 Add Bools 
+  - [ ] 3.5 Add Bools
         NOTE: Important for if-then-else
   - [ ] 3.6 Write tests
     - [x] 3.6.1 Write parser tests (15.11.2021)
-    - [ ] 3.6.1 Write compiler tests 
-  - [ ] 3.7 Add grades 
+    - [ ] 3.6.1 Write compiler tests
+  - [ ] 3.7 Add grades
     - [x] 3.7.1 fix typechecker (16.11.2021)
     - [x] 3.7.2 fix subst  (17.11.2021)
     - [x] 3.7.3 fix Quoting  (17.11.2021)
@@ -92,6 +91,7 @@ inherit the number of the project they belong to.
   - [ ] 9.5 Draw logo for AOC
 
 # Done:
+- [x] install LSP (05.12.2021)
 - [x] fix the injection PR (10.11.2021)
 - [x] fix the parser PR (10.11.2021)
 - ## [1] install Scala 3

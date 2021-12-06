@@ -30,8 +30,8 @@ markdown_extensions:
   # - pymdownx.superfences
   # - pymdownx.details
   # - pymdownx.magiclink
-  # - pymdownx.tasklist:
-  #     custom_checkbox: true
+  - pymdownx.tasklist:
+      custom_checkbox: false
 #  - pymdownx.emoji:
 #      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   # - admonition

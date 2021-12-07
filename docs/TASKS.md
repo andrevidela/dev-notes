@@ -6,6 +6,7 @@ inherit the number of the project they belong to.
 
 # Mailbox :
 
+- [ ] Fix prolude with latest Idris version
 
 # Projects :
 

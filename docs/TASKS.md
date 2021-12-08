@@ -6,8 +6,6 @@ inherit the number of the project they belong to.
 
 # Mailbox :
 
-- [ ] Fix prolude with latest Idris version
-
 # Projects :
 
 ## 3 Myrmidon language
@@ -29,6 +27,8 @@ inherit the number of the project they belong to.
   - [ ] 3.6 compile surface syntax into AST
   - [ ] 3.7 Experiment with compiler passes
   - [ ] 3.8 Add the funky semiring for both uses and stages
+    - [x] 3.8.1 write definition (07.12.2021)
+    - [ ] 3.8.3 prove that it's actually a semiring
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
@@ -50,6 +50,7 @@ inherit the number of the project they belong to.
 ## 6 Open-Servers
   - [x] 6.1 port the core logic to indexed paths
   - [ ] 6.2 fix the examples
+    - DEPENDS: 6.6
   - [x] 6.3 change type of GET request to implement lenses instead of functions to lenses (07.12.2021 - in reality done much earlier but I forgot to track the change)
   - [x] 6.4 implement the dep-lens EDSL (07.12.2021)
     - NOTES: kind of works but is blocked by 6.6
@@ -87,6 +88,14 @@ inherit the number of the project they belong to.
   - [ ] 8.5 write about common functions
   - [ ] 8.6 write about syntax
   - [ ] 8.7 write instructions to install and use
+  - [x] 8.8 port the new functions to prolude and refactor AOC 2021 (07.12.2021)
+    - [x] 8.8.1 Day 1 (07.12.2021)
+    - [x] 8.8.2 Day 2 (07.12.2021)
+    - [x] 8.8.3 Day 3 (07.12.2021)
+    - [x] 8.8.4 Day 4 (07.12.2021)
+    - [x] 8.8.5 Day 5 (07.12.2021)
+    - [x] 8.8.6 Day 6 (07.12.2021)
+    - [x] 8.8.7 Day 7 (07.12.2021)
 
 # 9 Graphics
   - [ ] 9.1 Draw logo for DJSON
@@ -96,6 +105,7 @@ inherit the number of the project they belong to.
   - [ ] 9.5 Draw logo for AOC
 
 # Done:
+- [x] Fix prolude with latest Idris version (07.12.2021)
 - [x] install LSP (05.12.2021)
 - [x] fix the injection PR (10.11.2021)
 - [x] fix the parser PR (10.11.2021)

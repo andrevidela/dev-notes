@@ -33,13 +33,15 @@ inherit the number of the project they belong to.
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
       - NOTE: it didn't work because singletons cannot promote constrained constructors
+      - NOTE: Maybe worth porting the probability library without mwc-prob
   - [x] 5.2 use mwc-prob to port to Idris
       - NOTE: didn't work either
+      - NOTE: (09.12.2021) I don't remember what this is
   - [ ] 5.3 write an idris version
-    - [x] 5.3.1 port the core opengames logic with lenses
-    - [x] 5.3.2 port the parser
-    - [x] 5.3.3 port the compiler
-    - [x] 5.3.4 port the code generator -- stuck on patterns
+    - [x] 5.3.1 port the core opengames logic with lenses (07.11.2021)
+    - [x] 5.3.2 port the parser (08.11.2021)
+    - [x] 5.3.3 port the compiler (09.11.2021)
+    - [x] 5.3.4 port the code generator (11.11.2021)
     - [ ] 5.3.5 figure out why evaluator doesn't reduce
     - [ ] 5.3.6 Implement type inference
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines

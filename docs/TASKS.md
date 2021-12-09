@@ -42,8 +42,7 @@ inherit the number of the project they belong to.
     - [x] 5.3.4 port the code generator -- stuck on patterns
     - [ ] 5.3.5 figure out why evaluator doesn't reduce
     - [ ] 5.3.6 Implement type inference
-      - NOTE: types of the block are the boundary of the lens,
-        the states are the products of the state of the lines
+      - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
   - [ ]  5.4 Port the preprocessor to the updated version
   - [ ]  5.5 Write installation instructions for the haskell version
 
@@ -57,7 +56,7 @@ inherit the number of the project they belong to.
   - [ ] 6.5 try out idris-server http server project
     - [x] 6.5.1 run locally -- doesn't work (10.11.2021)
     - [x] 6.5.2 Perform the suggested fixes from discord (11.11.2021)
-      NOTE: didn't work, missing module: TyTTP.Support.Promise
+      - NOTE: didn't work, missing module: TyTTP.Support.Promise
     - [ ] 6.5.2' Perform the suggested fixes from discord
       NOTE: Updated info from package author, need to try again!
     - [ ] 6.5.3 see if we can interpret LogIO into the node JS server

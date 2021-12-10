@@ -42,7 +42,11 @@ inherit the number of the project they belong to.
     - [x] 5.3.2 port the parser (08.11.2021)
     - [x] 5.3.3 port the compiler (09.11.2021)
     - [x] 5.3.4 port the code generator (11.11.2021)
-    - [ ] 5.3.5 figure out why evaluator doesn't reduce
+    - [x] 5.3.5 figure out why evaluator doesn't reduce (09.12.2021)
+      - NOTE: It works now! but it's really slow, and using the scheme evaluator fails,
+        I don't know why yet but but it seems to be due to scheme, the generated scheme leads to an
+        error when sent to the runtime, so the `eval` function returns an excepption. We catch it
+        but we don't return its diagnostic info, so we need to change that to make it available.
     - [ ] 5.3.6 Implement type inference
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
   - [ ]  5.4 Port the preprocessor to the updated version

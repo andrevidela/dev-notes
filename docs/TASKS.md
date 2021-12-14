@@ -19,11 +19,12 @@ inherit the number of the project they belong to.
   - [ ] 3.6 Write tests
     - [x] 3.6.1 Write parser tests (15.11.2021)
     - [ ] 3.6.1 Write compiler tests
-  - [ ] 3.7 Add grades
+  - [x] 3.7 Add grades (14.12.2021)
     - [x] 3.7.1 fix typechecker (16.11.2021)
     - [x] 3.7.2 fix subst  (17.11.2021)
     - [x] 3.7.3 fix Quoting  (17.11.2021)
-    - [ ] 3.7.4 Abstract over the grades in context
+    - [x] 3.7.4 Abstract over the grades in context (14.12.2021)
+      - NOTE: this was already done but I just noticed today (14.12.2021)
   - [ ] 3.6 compile surface syntax into AST
   - [ ] 3.7 Experiment with compiler passes
   - [ ] 3.8 Add the funky semiring for both uses and stages
@@ -49,8 +50,10 @@ inherit the number of the project they belong to.
         but we don't return its diagnostic info, so we need to change that to make it available.
     - [ ] 5.3.6 Implement type inference
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
-  - [ ]  5.4 Port the preprocessor to the updated version
+    - [ ] 5.3.7 update the scheme support file to return either rather than Maybe
+  - [x]  5.4 Port the preprocessor to the updated version (13.12.2021)
   - [ ]  5.5 Write installation instructions for the haskell version
+  - [ ]  5.6 Test the parser in the refactored version
 
 ## 6 Open-Servers
   - [x] 6.1 port the core logic to indexed paths

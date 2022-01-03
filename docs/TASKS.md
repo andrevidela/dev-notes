@@ -27,9 +27,13 @@ inherit the number of the project they belong to.
       - NOTE: this was already done but I just noticed today (14.12.2021)
   - [ ] 3.6 compile surface syntax into AST
   - [ ] 3.7 Experiment with compiler passes
+      - NOTE: Attempt to run linearity checking twice in a row to simulate a biaised semiring
+        by partially evaluating things that are True and then typechecking again to see that none of the
+        erased quantities remain.
   - [ ] 3.8 Add the funky semiring for both uses and stages
     - [x] 3.8.1 write definition (07.12.2021)
     - [ ] 3.8.3 prove that it's actually a semiring
+  - [ ] 3.9 Add a Scheme codegen
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
@@ -51,13 +55,17 @@ inherit the number of the project they belong to.
     - [ ] 5.3.6 Implement type inference
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
     - [ ] 5.3.7 update the scheme support file to return either rather than Maybe
-  - [x]  5.4 Port the preprocessor to the updated version (13.12.2021)
-  - [ ]  5.5 Write installation instructions for the haskell version
-  - [ ]  5.6 Test the parser in the refactored version
+  - [x] 5.4 Port the preprocessor to the updated version (13.12.2021)
+  - [ ] 5.5 Write installation instructions for the haskell version
+  - [ ] 5.6 Test the parser in the refactored version
+  - [ ] 5.7 Open games implementation paper
+    - [ ] 5.7.1 Draft chapters
+    - [ ] 5.7.2 Write about scope checking
 
 ## 6 Open-Servers
   - [x] 6.1 port the core logic to indexed paths
   - [ ] 6.2 fix the examples
+    - NOTE: After the changes to the core, the Servant examples won't work anymore
     - DEPENDS: 6.6
   - [x] 6.3 change type of GET request to implement lenses instead of functions to lenses (07.12.2021 - in reality done much earlier but I forgot to track the change)
   - [x] 6.4 implement the dep-lens EDSL (07.12.2021)
@@ -67,14 +75,17 @@ inherit the number of the project they belong to.
     - [x] 6.5.2 Perform the suggested fixes from discord (11.11.2021)
       - NOTE: didn't work, missing module: TyTTP.Support.Promise
     - [ ] 6.5.2' Perform the suggested fixes from discord
-      NOTE: Updated info from package author, need to try again!
+      - NOTE: Updated info from package author, need to try again!
     - [ ] 6.5.3 see if we can interpret LogIO into the node JS server
-  - [ ] 6.6 Implement Free Dependent Para lenses
-    - NOTE: Maybe it's possible to re-implement DepParaLenses in terms of FreeDepParaLens
-    - NOTE: Maybe it's possible to write both depending on a given type algebra
-    - NOTE: This is necessary in order to recover how each lens is composed with each other for the DSL
-      Without it we can't implement `Extend` nor `Prefix`
-
+  - [ ] 6.6 Implement servers as Dependent Para lenses
+    - [x] 6.6.1 implement server as a dependent lens rather than rely on the DSL (18.12.2021)
+    - [x] 6.6.2 Implement routing as products of extended lenses rather than rely on `Str` path components (21.01.2022)
+    - [x] 6.6.3 Fix an issue where the state could not be update because it depends on the input type of the request (01.01.2022)
+    - [x] 6.6.4 Fix issue with dependent lenses where `composition` would not terminate (03.01.2022)
+    - [ ] 6.6.5 Implement the missing dependent interfaces dependening on `server`, aka implement `instanceLens`
+    - [ ] 6.6.6 reimplement server as external choice of existing servers
+    - [ ] 6.6.7 (remove reliance on explicit instanciation of interfaces) (might be superseeded by 6.6.8)
+    - [ ] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation
 
 # 7 Data generic programming
   - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)
@@ -104,6 +115,11 @@ inherit the number of the project they belong to.
     - [x] 8.8.5 Day 5 (07.12.2021)
     - [x] 8.8.6 Day 6 (07.12.2021)
     - [x] 8.8.7 Day 7 (07.12.2021)
+    - [ ] 8.8.8 Day 8
+    - [ ] 8.8.9 Day 9
+    - [ ] 8.8.10 Day 10
+    - [ ] 8.8.11 Day 11
+    - [ ] 8.8.12 Day 12
 
 # 9 Graphics
   - [ ] 9.1 Draw logo for DJSON

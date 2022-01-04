@@ -6,6 +6,19 @@ inherit the number of the project they belong to.
 
 # Mailbox :
 
+  - [ ] Write abstract for Dependent types talk in March
+  - [ ] Reproduce bug about namespaces and non-total functions at typechecking
+    - NOTE: If you implement a function `f` inside a module `NS` and you create
+      an additional namespace `NS` inside your module and have another function `f`
+      inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
+      refer to the `f` at the top level module, but will refer to itself.
+      This is obviously not total, and if you call `NS.NS.f` then it will loop
+      forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
+      hang forever.
+  - [ ] Use idris-hedgehog to generate functions for equilibrium checking
+    - NOTE: The goal is to, given a pair of types, generate all functions from
+      one type to the other. `(a, b : Type) -> Stream (a -> b)`
+
 # Projects :
 
 ## 3 Myrmidon language
@@ -25,7 +38,7 @@ inherit the number of the project they belong to.
     - [x] 3.7.3 fix Quoting  (17.11.2021)
     - [x] 3.7.4 Abstract over the grades in context (14.12.2021)
       - NOTE: this was already done but I just noticed today (14.12.2021)
-  - [ ] 3.6 compile surface syntax into AST
+  - [ ] /!\ 3.6 compile surface syntax into AST
   - [ ] 3.7 Experiment with compiler passes
       - NOTE: Attempt to run linearity checking twice in a row to simulate a biaised semiring
         by partially evaluating things that are True and then typechecking again to see that none of the
@@ -33,7 +46,7 @@ inherit the number of the project they belong to.
   - [ ] 3.8 Add the funky semiring for both uses and stages
     - [x] 3.8.1 write definition (07.12.2021)
     - [ ] 3.8.3 prove that it's actually a semiring
-  - [ ] 3.9 Add a Scheme codegen
+  - [x] 3.9 Add a Scheme codegen (04.01.2022)
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons

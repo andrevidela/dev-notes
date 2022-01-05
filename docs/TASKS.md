@@ -7,14 +7,6 @@ inherit the number of the project they belong to.
 # Mailbox :
 
   - [ ] Write abstract for Dependent types talk in March
-  - [ ] Reproduce bug about namespaces and non-total functions at typechecking
-    - NOTE: If you implement a function `f` inside a module `NS` and you create
-      an additional namespace `NS` inside your module and have another function `f`
-      inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
-      refer to the `f` at the top level module, but will refer to itself.
-      This is obviously not total, and if you call `NS.NS.f` then it will loop
-      forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
-      hang forever.
   - [ ] Use idris-hedgehog to generate functions for equilibrium checking
     - NOTE: The goal is to, given a pair of types, generate all functions from
       one type to the other. `(a, b : Type) -> Stream (a -> b)`
@@ -99,6 +91,14 @@ inherit the number of the project they belong to.
     - [ ] 6.6.6 reimplement server as external choice of existing servers
     - [ ] 6.6.7 (remove reliance on explicit instanciation of interfaces) (might be superseeded by 6.6.8)
     - [ ] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation
+  - [ ] 6.7 Try out new lenses
+    - [ ] 6.7.1 try the dependent van-laarhoven
+      - ```
+        Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) ->
+                     (i : s) -> {0 t : s -> Type} -> f (t i)
+        ```
+
+
 
 # 7 Data generic programming
   - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)
@@ -142,6 +142,15 @@ inherit the number of the project they belong to.
   - [ ] 9.5 Draw logo for AOC
 
 # Done:
+- [-] Reproduce bug about namespaces and non-total functions at typechecking
+  - NOTE: If you implement a function `f` inside a module `NS` and you create
+    an additional namespace `NS` inside your module and have another function `f`
+    inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
+    refer to the `f` at the top level module, but will refer to itself.
+    This is obviously not total, and if you call `NS.NS.f` then it will loop
+    forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
+    hang forever.
+  - NOTE: I gave up, it takes too much time and it's too finnicky.
 - [x] Fix prolude with latest Idris version (07.12.2021)
 - [x] install LSP (05.12.2021)
 - [x] fix the injection PR (10.11.2021)

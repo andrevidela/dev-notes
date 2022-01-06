@@ -69,7 +69,7 @@ inherit the number of the project they belong to.
 
 ## 6 Open-Servers
   - [x] 6.1 port the core logic to indexed paths
-  - [ ] 6.2 fix the examples
+  - [ ] 6.2 fix the Servant DSL
     - NOTE: After the changes to the core, the Servant examples won't work anymore
     - DEPENDS: 6.6
   - [x] 6.3 change type of GET request to implement lenses instead of functions to lenses (07.12.2021 - in reality done much earlier but I forgot to track the change)
@@ -87,18 +87,34 @@ inherit the number of the project they belong to.
     - [x] 6.6.2 Implement routing as products of extended lenses rather than rely on `Str` path components (21.01.2022)
     - [x] 6.6.3 Fix an issue where the state could not be update because it depends on the input type of the request (01.01.2022)
     - [x] 6.6.4 Fix issue with dependent lenses where `composition` would not terminate (03.01.2022)
-    - [ ] 6.6.5 Implement the missing dependent interfaces dependening on `server`, aka implement `instanceLens`
-    - [ ] 6.6.6 reimplement server as external choice of existing servers
-    - [ ] 6.6.7 (remove reliance on explicit instanciation of interfaces) (might be superseeded by 6.6.8)
+    - [x] 6.6.5 Implement the missing dependent interfaces dependening on `server`, aka implement `instanceLens` (05.01.2022)
+    - [x] 6.6.6 reimplement server as external choice of existing servers (05.01.2022)
+      - COMMIT: e5995e537c2990
+    - [x] 6.6.7 Implement a server as external choice but with a top level path (05.01.2022)
+      - NOTE: AKA
+        ```
+        /lights ╶┬╴/kitchen
+                 └╴/bedroom
+        ```
+      - COMMIT: 7f1260385e
     - [ ] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation
+      - NOTE: It's working but two things are strange:
+        1. we need some sort of `Update` interface which ensures we can update the final state from some substate
+        2. Our `State` constructor requires the overall state to be parsable but that is not necessary if we don't expose the
+           `POST` part of the endpoint
   - [ ] 6.7 Try out new lenses
     - [ ] 6.7.1 try the dependent van-laarhoven
       - ```
         Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) ->
                      (i : s) -> {0 t : s -> Type} -> f (t i)
         ```
-
-
+  - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
+    directed containers. Can we convert from one to the other?
+  - [ ] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum
+    and `String.Singlton` instead
+    - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
+      parsing functions
+  - [ ] 6.10 Make it possible to have endpoints with arguments in the middle
 
 # 7 Data generic programming
   - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)
@@ -142,23 +158,23 @@ inherit the number of the project they belong to.
   - [ ] 9.5 Draw logo for AOC
 
 # Done:
-- [-] Reproduce bug about namespaces and non-total functions at typechecking
-  - NOTE: If you implement a function `f` inside a module `NS` and you create
-    an additional namespace `NS` inside your module and have another function `f`
-    inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
-    refer to the `f` at the top level module, but will refer to itself.
-    This is obviously not total, and if you call `NS.NS.f` then it will loop
-    forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
-    hang forever.
-  - NOTE: I gave up, it takes too much time and it's too finnicky.
-- [x] Fix prolude with latest Idris version (07.12.2021)
-- [x] install LSP (05.12.2021)
-- [x] fix the injection PR (10.11.2021)
-- [x] fix the parser PR (10.11.2021)
-- ## 1 install Scala 3
-  - [x] 1.1 implement STLC with Match types ??? -- didn't work
-- ## 2 figure out a DSL for programs
-  - [x] 2.5 Check the injectivity pull request
-  - [x] 2.6 Finish the dev notes about Idris2
-  - [x] 2.7 Write the documentation for string interpolation concat
-- [x] fix the PR about injection (23.11.2021)
+ - [-] Reproduce bug about namespaces and non-total functions at typechecking
+     - NOTE: If you implement a function `f` inside a module `NS` and you create
+       an additional namespace `NS` inside your module and have another function `f`
+       inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
+       refer to the `f` at the top level module, but will refer to itself.
+       This is obviously not total, and if you call `NS.NS.f` then it will loop
+       forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
+       hang forever.
+     - NOTE: I gave up, it takes too much time and it's too finnicky.
+ - [x] Fix prolude with latest Idris version (07.12.2021)
+ - [x] install LSP (05.12.2021)
+ - [x] fix the injection PR (10.11.2021)
+ - [x] fix the parser PR (10.11.2021)
+ - ## 1 install Scala 3
+   - [x] 1.1 implement STLC with Match types ??? -- didn't work
+ - ## 2 figure out a DSL for programs
+   - [x] 2.5 Check the injectivity pull request
+   - [x] 2.6 Finish the dev notes about Idris2
+   - [x] 2.7 Write the documentation for string interpolation concat
+ - [x] fix the PR about injection (23.11.2021)

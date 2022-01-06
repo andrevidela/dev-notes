@@ -5,7 +5,6 @@ Projects are marked with a title and a number. Sub-tasks
 inherit the number of the project they belong to.
 
 # Mailbox :
-
   - [ ] Write abstract for Dependent types talk in March
   - [ ] Use idris-hedgehog to generate functions for equilibrium checking
     - NOTE: The goal is to, given a pair of types, generate all functions from
@@ -78,24 +77,23 @@ inherit the number of the project they belong to.
                  └╴/bedroom
         ```
       - COMMIT: 7f1260385e
-    - [ ] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation
+    - [x] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation ^5e3aef (06.01.2022)
       - NOTE: It's working but two things are strange:
         1. we need some sort of `Update` interface which ensures we can update the final state from some substate
         2. Our `State` constructor requires the overall state to be parsable but that is not necessary if we don't expose the
            `POST` part of the endpoint
+    - [ ] 6.6.9 Fix the MR review comments
   - [ ] 6.7 Try out new lenses
     - [ ] 6.7.1 try the dependent van-laarhoven
-      - ```
-        Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) ->
-                     (i : s) -> {0 t : s -> Type} -> f (t i)
-        ```
+      - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
   - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
     directed containers. Can we convert from one to the other?
   - [ ] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum
-    and `String.Singlton` instead
+    and `String.Singleton` instead
     - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
       parsing functions
   - [ ] 6.10 Make it possible to have endpoints with arguments in the middle
+  - [ ] 6.11 Take a look at Matteo's draft of the paper
 
 # 7 Data generic programming
   - [ ] 7.3 write the blog post about CFT
@@ -126,6 +124,8 @@ inherit the number of the project they belong to.
   - [ ] 9.3 Draw logo for Prolude
   - [ ] 9.4 update logo for Open servers
   - [ ] 9.5 Draw logo for AOC
+
+---------------------------------------------------------------------------------
 
 # Done:
 

@@ -29,7 +29,6 @@ inherit the number of the project they belong to.
   - [ ] 3.8 Add the funky semiring for both uses and stages
     - [x] 3.8.1 write definition (07.12.2021)
     - [ ] 3.8.3 prove that it's actually a semiring
-  - [x] 3.9 Add a Scheme codegen (04.01.2022)
 
 ## 5 OpenGames things
   - [ ] 5.3 write an idris version
@@ -54,7 +53,6 @@ inherit the number of the project they belong to.
 ## 6 Open-Servers
   - [ ] 6.2 fix the Servant DSL
     - NOTE: After the changes to the core, the Servant examples won't work anymore
-    - DEPENDS: 6.6
   - [ ] 6.5 try out idris-server http server project
     - [x] 6.5.1 run locally -- doesn't work (10.11.2021)
     - [x] 6.5.2 Perform the suggested fixes from discord (11.11.2021)
@@ -62,27 +60,6 @@ inherit the number of the project they belong to.
     - [ ] 6.5.2' Perform the suggested fixes from discord
       - NOTE: Updated info from package author, need to try again!
     - [ ] 6.5.3 see if we can interpret LogIO into the node JS server
-  - [ ] 6.6 Implement servers as Dependent Para lenses
-    - [x] 6.6.1 implement server as a dependent lens rather than rely on the DSL (18.12.2021)
-    - [x] 6.6.2 Implement routing as products of extended lenses rather than rely on `Str` path components (21.01.2022)
-    - [x] 6.6.3 Fix an issue where the state could not be update because it depends on the input type of the request (01.01.2022)
-    - [x] 6.6.4 Fix issue with dependent lenses where `composition` would not terminate (03.01.2022)
-    - [x] 6.6.5 Implement the missing dependent interfaces dependening on `server`, aka implement `instanceLens` (05.01.2022)
-    - [x] 6.6.6 reimplement server as external choice of existing servers (05.01.2022)
-      - COMMIT: e5995e537c2990
-    - [x] 6.6.7 Implement a server as external choice but with a top level path (05.01.2022)
-      - NOTE: AKA
-        ```
-        /lights ╶┬╴/kitchen
-                 └╴/bedroom
-        ```
-      - COMMIT: 7f1260385e
-    - [x] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation ^5e3aef (06.01.2022)
-      - NOTE: It's working but two things are strange:
-        1. we need some sort of `Update` interface which ensures we can update the final state from some substate
-        2. Our `State` constructor requires the overall state to be parsable but that is not necessary if we don't expose the
-           `POST` part of the endpoint
-    - [ ] 6.6.9 Fix the MR review comments
   - [ ] 6.7 Try out new lenses
     - [ ] 6.7.1 try the dependent van-laarhoven
       - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
@@ -161,6 +138,7 @@ inherit the number of the project they belong to.
     - [x] 3.7.3 fix Quoting  (17.11.2021)
     - [x] 3.7.4 Abstract over the grades in context (14.12.2021)
       - NOTE: this was already done but I just noticed today (14.12.2021)
+  - [x] 3.9 Add a Scheme codegen (04.01.2022)
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons
@@ -175,6 +153,27 @@ inherit the number of the project they belong to.
   - [x] 6.3 change type of GET request to implement lenses instead of functions to lenses (07.12.2021 - in reality done much earlier but I forgot to track the change)
   - [x] 6.4 implement the dep-lens EDSL (07.12.2021)
     - NOTES: kind of works but is blocked by 6.6
+  - [x] 6.6 Implement servers as Dependent Para lenses (09.01.2022)
+    - [x] 6.6.1 implement server as a dependent lens rather than rely on the DSL (18.12.2021)
+    - [x] 6.6.2 Implement routing as products of extended lenses rather than rely on `Str` path components (21.01.2022)
+    - [x] 6.6.3 Fix an issue where the state could not be update because it depends on the input type of the request (01.01.2022)
+    - [x] 6.6.4 Fix issue with dependent lenses where `composition` would not terminate (03.01.2022)
+    - [x] 6.6.5 Implement the missing dependent interfaces dependening on `server`, aka implement `instanceLens` (05.01.2022)
+    - [x] 6.6.6 reimplement server as external choice of existing servers (05.01.2022)
+      - COMMIT: e5995e537c2990
+    - [x] 6.6.7 Implement a server as external choice but with a top level path (05.01.2022)
+      - NOTE: AKA
+        ```
+        /lights ╶┬╴/kitchen
+                 └╴/bedroom
+        ```
+      - COMMIT: 7f1260385e
+    - [x] 6.6.8 Rewrite a DSL for dependent para lens and give it a `ServerInstance` implementation ^5e3aef (06.01.2022)
+      - NOTE: It's working but two things are strange:
+        1. we need some sort of `Update` interface which ensures we can update the final state from some substate
+        2. Our `State` constructor requires the overall state to be parsable but that is not necessary if we don't expose the
+           `POST` part of the endpoint
+    - [x] 6.6.9 Fix the MR review comments (09.01.2022)
 
 # 7 Data generic programming
   - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)

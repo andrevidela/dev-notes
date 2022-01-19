@@ -9,6 +9,7 @@ inherit the number of the project they belong to.
   - [ ] Use idris-hedgehog to generate functions for equilibrium checking
     - NOTE: The goal is to, given a pair of types, generate all functions from
       one type to the other. `(a, b : Type) -> Stream (a -> b)`
+  - [x] move all NPL Org into gitlab
 
 # Projects :
 
@@ -20,8 +21,8 @@ inherit the number of the project they belong to.
     - NOTE: Important for if-then-else
   - [ ] 3.6 Write tests
     - [x] 3.6.1 Write parser tests (15.11.2021)
-    - [ ] 3.6.1 Write compiler tests
-  - [ ] /!\ 3.6 compile surface syntax into AST
+    - [ ] 3.6.2 Write compiler tests based on the haskell version
+  - [x] 3.6 compile surface syntax into AST
   - [ ] 3.7 Experiment with compiler passes
       - NOTE: Attempt to run linearity checking twice in a row to simulate a biaised semiring
         by partially evaluating things that are True and then typechecking again to see that none of the
@@ -29,6 +30,8 @@ inherit the number of the project they belong to.
   - [ ] 3.8 Add the funky semiring for both uses and stages
     - [x] 3.8.1 write definition (07.12.2021)
     - [ ] 3.8.3 prove that it's actually a semiring
+  - [ ] 3.9 implement co-debruijn indices
+  - [ ] 3.11 write a REPL
 
 ## 5 OpenGames things
   - [ ] 5.3 write an idris version
@@ -65,12 +68,15 @@ inherit the number of the project they belong to.
       - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
   - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
     directed containers. Can we convert from one to the other?
+    - [ ] 6.8.1 dependent lenses as directed containers
+    - [ ] 6.8.2 directed containers as comonads
   - [ ] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum
     and `String.Singleton` instead
     - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
       parsing functions
   - [ ] 6.10 Make it possible to have endpoints with arguments in the middle
   - [ ] 6.11 Take a look at Matteo's draft of the paper
+  - [ ] 6.12 Allow dependent endpoints
 
 # 7 Data generic programming
   - [ ] 7.3 write the blog post about CFT

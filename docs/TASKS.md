@@ -74,7 +74,6 @@ inherit the number of the project they belong to.
     and `String.Singleton` instead
     - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
       parsing functions
-  - [ ] 6.10 Make it possible to have endpoints with arguments in the middle
   - [ ] 6.11 Take a look at Matteo's draft of the paper
   - [ ] 6.12 Allow dependent endpoints
 
@@ -180,6 +179,7 @@ inherit the number of the project they belong to.
         2. Our `State` constructor requires the overall state to be parsable but that is not necessary if we don't expose the
            `POST` part of the endpoint
     - [x] 6.6.9 Fix the MR review comments (09.01.2022)
+  - [x] 6.10 Make it possible to have endpoints with arguments in the middle
 
 # 7 Data generic programming
   - [x] 7.1 implement in terms of CFTprogramming (10.11.2021)

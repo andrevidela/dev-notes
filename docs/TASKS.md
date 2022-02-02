@@ -9,7 +9,11 @@ inherit the number of the project they belong to.
   - [ ] Use idris-hedgehog to generate functions for equilibrium checking
     - NOTE: The goal is to, given a pair of types, generate all functions from
       one type to the other. `(a, b : Type) -> Stream (a -> b)`
-  - [x] move all NPL Org into gitlab
+  - [ ] /!\ Complete support for ipkg in sirdi
+    - [ ] Support cloning git
+      - NOTE: we need to pull the repository into a temp directory checkout and then copy back into sources
+    - [ ] Support legacy instructions
+      - NOTE: We need to know where the ipkg file is, and then run the install script
 
 # Projects :
 
@@ -17,12 +21,14 @@ inherit the number of the project they belong to.
   - [ ] 3.3 Add Vect
   - [ ] 3.4 Add Fins
     - NOTE: Important for indexing vectors
-  - [ ] 3.5 Add Bools
+  - [ ] 3.5 #2 Add Bools
     - NOTE: Important for if-then-else
-  - [ ] 3.6 Write tests
+  - [ ] 3.6 #1 Write tests
     - [x] 3.6.1 Write parser tests (15.11.2021)
-    - [ ] 3.6.2 Write compiler tests based on the haskell version
-  - [x] 3.6 compile surface syntax into AST
+    - [ ] 3.6.2 /!\ Read files and execute them
+    - [ ] 3.6.3 Read files and compile them
+    - [ ] 3.6.4 figure out how to run a file from the haskell version
+    - [ ] 3.6.5 Write compiler tests based on the haskell version
   - [ ] 3.7 Experiment with compiler passes
       - NOTE: Attempt to run linearity checking twice in a row to simulate a biaised semiring
         by partially evaluating things that are True and then typechecking again to see that none of the
@@ -31,7 +37,7 @@ inherit the number of the project they belong to.
     - [x] 3.8.1 write definition (07.12.2021)
     - [ ] 3.8.3 prove that it's actually a semiring
   - [ ] 3.9 implement co-debruijn indices
-  - [ ] 3.11 write a REPL
+  - [ ] 3.11 #3 write a REPL
 
 ## 5 OpenGames things
   - [ ] 5.3 write an idris version
@@ -48,13 +54,19 @@ inherit the number of the project they belong to.
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
     - [ ] 5.3.7 update the scheme support file to return either rather than Maybe
   - [ ] 5.5 Write installation instructions for the haskell version
-  - [ ] 5.6 Test the parser in the refactored version
+  - [ ] 5.6 /!\ Test the parser in the refactored version
+     - [ ] 5.6.1 port the code from vlad
+       NOTE:
+       - change all the decision operators to use the ones from philips code (the kleisli stuff)
+       - Stuck because of 5.9
   - [ ] 5.7 Open games implementation paper
     - [ ] 5.7.1 Draft chapters
     - [ ] 5.7.2 Write about scope checking
+  - [ ] 5.8 Move updated project into original repository
+  - [ ] 5.9 /!\ implement typed population without implementation
 
 ## 6 Open-Servers
-  - [ ] 6.2 fix the Servant DSL
+  - [ ] 6.2 /!\ fix the Servant DSL
     - NOTE: After the changes to the core, the Servant examples won't work anymore
   - [ ] 6.5 try out idris-server http server project
     - [x] 6.5.1 run locally -- doesn't work (10.11.2021)
@@ -68,8 +80,10 @@ inherit the number of the project they belong to.
       - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
   - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
     directed containers. Can we convert from one to the other?
-    - [ ] 6.8.1 dependent lenses as directed containers
-    - [ ] 6.8.2 directed containers as comonads
+    - [ ] 6.8.1 Implement directed containers
+    - [ ] 6.8.2 Directed containers morphisms as directed containers?
+    - [ ] 6.8.3 dependent lenses as directed containers?
+    - [ ] 6.8.4 directed containers as comonads
   - [ ] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum
     and `String.Singleton` instead
     - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
@@ -112,31 +126,34 @@ inherit the number of the project they belong to.
 # Done:
 
 ## Mailbox
- - [-] Reproduce bug about namespaces and non-total functions at typechecking
-     - NOTE: If you implement a function `f` inside a module `NS` and you create
-       an additional namespace `NS` inside your module and have another function `f`
-       inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
-       refer to the `f` at the top level module, but will refer to itself.
-       This is obviously not total, and if you call `NS.NS.f` then it will loop
-       forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
-       hang forever.
-     - NOTE: I gave up, it takes too much time and it's too finnicky.
- - [x] Fix prolude with latest Idris version (07.12.2021)
- - [x] install LSP (05.12.2021)
- - [x] fix the injection PR (10.11.2021)
- - [x] fix the parser PR (10.11.2021)
- ## 1 install Scala 3
-   - [x] 1.1 implement STLC with Match types ??? -- didn't work
- ## 2 figure out a DSL for programs
-   - [x] 2.5 Check the injectivity pull request
-   - [x] 2.6 Finish the dev notes about Idris2
-   - [x] 2.7 Write the documentation for string interpolation concat
- - [x] fix the PR about injection (23.11.2021)
+  - [-] Reproduce bug about namespaces and non-total functions at typechecking
+      - NOTE: If you implement a function `f` inside a module `NS` and you create
+        an additional namespace `NS` inside your module and have another function `f`
+        inside it. Then implementing the nested `f` (`NS.NS.f`) as `f = NS.f` won't
+        refer to the `f` at the top level module, but will refer to itself.
+        This is obviously not total, and if you call `NS.NS.f` then it will loop
+        forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
+        hang forever.
+      - NOTE: I gave up, it takes too much time and it's too finnicky.
+  - [x] Fix prolude with latest Idris version (07.12.2021)
+  - [x] install LSP (05.12.2021)
+  - [x] fix the injection PR (10.11.2021)
+  - [x] fix the parser PR (10.11.2021)
+  - [x] 1 install Scala 3
+    - [x] 1.1 implement STLC with Match types ??? -- didn't work
+  - [x] 2 figure out a DSL for programs
+    - [x] 2.5 Check the injectivity pull request
+    - [x] 2.6 Finish the dev notes about Idris2
+    - [x] 2.7 Write the documentation for string interpolation concat
+  - [x] fix the PR about injection (23.11.2021)
+  - [x] move all NPL Org into gitlab
+  - [x] Complete linear PR (31.01.2022)
 
 
 ## 3 Myrmidon language
   - [x] 3.1 finish the parser (15.11.2021)
   - [x] 3.2 add Nat (14.11.2021)
+  - [x] 3.6 compile surface syntax into AST
   - [x] 3.7 Add grades (14.12.2021)
     - [x] 3.7.1 fix typechecker (16.11.2021)
     - [x] 3.7.2 fix subst  (17.11.2021)

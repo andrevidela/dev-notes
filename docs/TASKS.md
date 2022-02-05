@@ -5,7 +5,6 @@ Projects are marked with a title and a number. Sub-tasks
 inherit the number of the project they belong to.
 
 # Mailbox :
-  - [ ] Write abstract for Dependent types talk in March
   - [ ] Use idris-hedgehog to generate functions for equilibrium checking
     - NOTE: The goal is to, given a pair of types, generate all functions from
       one type to the other. `(a, b : Type) -> Stream (a -> b)`
@@ -90,6 +89,7 @@ inherit the number of the project they belong to.
       parsing functions
   - [ ] 6.11 Take a look at Matteo's draft of the paper
   - [ ] 6.12 Allow dependent endpoints
+  - [ ] 6.13 Tensor in the DSL
 
 # 7 Data generic programming
   - [ ] 7.3 write the blog post about CFT
@@ -148,6 +148,7 @@ inherit the number of the project they belong to.
   - [x] fix the PR about injection (23.11.2021)
   - [x] move all NPL Org into gitlab
   - [x] Complete linear PR (31.01.2022)
+  - [x] Write abstract for Dependent types talk in March (05.02.2022)
 
 
 ## 3 Myrmidon language

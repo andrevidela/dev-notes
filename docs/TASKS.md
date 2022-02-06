@@ -4,15 +4,6 @@ The mailbox contains unrelated items which needs doing
 Projects are marked with a title and a number. Sub-tasks
 inherit the number of the project they belong to.
 
-# Mailbox :
-  - [ ] Use idris-hedgehog to generate functions for equilibrium checking
-    - NOTE: The goal is to, given a pair of types, generate all functions from
-      one type to the other. `(a, b : Type) -> Stream (a -> b)`
-  - [ ] /!\ Complete support for ipkg in sirdi
-    - [ ] Support cloning git
-      - NOTE: we need to pull the repository into a temp directory checkout and then copy back into sources
-    - [ ] Support legacy instructions
-      - NOTE: We need to know where the ipkg file is, and then run the install script
 
 # Projects :
 
@@ -36,7 +27,7 @@ inherit the number of the project they belong to.
     - [x] 3.8.1 write definition (07.12.2021)
     - [ ] 3.8.3 prove that it's actually a semiring
   - [ ] 3.9 implement co-debruijn indices
-  - [ ] 3.11 #3 write a REPL
+  - [ ] 3.11 write a REPL
 
 ## 5 OpenGames things
   - [ ] 5.3 write an idris version
@@ -53,7 +44,7 @@ inherit the number of the project they belong to.
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
     - [ ] 5.3.7 update the scheme support file to return either rather than Maybe
   - [ ] 5.5 Write installation instructions for the haskell version
-  - [ ] 5.6 /!\ Test the parser in the refactored version
+  - [ ] 5.6 Test the parser in the refactored version ⏫
      - [ ] 5.6.1 port the code from vlad
        NOTE:
        - change all the decision operators to use the ones from philips code (the kleisli stuff)
@@ -62,14 +53,14 @@ inherit the number of the project they belong to.
     - [ ] 5.7.1 Draft chapters
     - [ ] 5.7.2 Write about scope checking
   - [ ] 5.8 Move updated project into original repository
-  - [ ] 5.9 /!\ implement typed population without implementation
+  - [x] 5.9 /!\ implement typed population without implementation ✅ 2022-02-03
 
 ## 6 Open-Servers
-  - [ ] 6.2 /!\ fix the Servant DSL
+  - [ ] 6.2 fix the Servant DSL ⏫
     - NOTE: After the changes to the core, the Servant examples won't work anymore
   - [ ] 6.5 try out idris-server http server project
-    - [x] 6.5.1 run locally -- doesn't work (10.11.2021)
-    - [x] 6.5.2 Perform the suggested fixes from discord (11.11.2021)
+    - [x] 6.5.1 run locally -- doesn't work ✅ 2021-11-10
+    - [x] 6.5.2 Perform the suggested fixes from discord ✅ 2021-11-11
       - NOTE: didn't work, missing module: TyTTP.Support.Promise
     - [ ] 6.5.2' Perform the suggested fixes from discord
       - NOTE: Updated info from package author, need to try again!
@@ -89,7 +80,7 @@ inherit the number of the project they belong to.
       parsing functions
   - [ ] 6.11 Take a look at Matteo's draft of the paper
   - [ ] 6.12 Allow dependent endpoints
-  - [ ] 6.13 Tensor in the DSL
+  - [ ] 6.13 Tensor in the DSL ⏫
 
 # 7 Data generic programming
   - [ ] 7.3 write the blog post about CFT
@@ -135,20 +126,20 @@ inherit the number of the project they belong to.
         forever. If `NS.NS.f` happens to occur at compile-time, the typechecker will
         hang forever.
       - NOTE: I gave up, it takes too much time and it's too finnicky.
-  - [x] Fix prolude with latest Idris version (07.12.2021)
-  - [x] install LSP (05.12.2021)
-  - [x] fix the injection PR (10.11.2021)
-  - [x] fix the parser PR (10.11.2021)
+  - [x] Fix prolude with latest Idris version ✅ 2021-12-07
+  - [x] install LSP ✅ 2021-12-05
+  - [x] fix the injection PR ✅ 2021-11-10
+  - [x] fix the parser PR ✅ 2021-11-10
   - [x] 1 install Scala 3
     - [x] 1.1 implement STLC with Match types ??? -- didn't work
   - [x] 2 figure out a DSL for programs
     - [x] 2.5 Check the injectivity pull request
     - [x] 2.6 Finish the dev notes about Idris2
     - [x] 2.7 Write the documentation for string interpolation concat
-  - [x] fix the PR about injection (23.11.2021)
+  - [x] fix the PR about injection ✅ 2021-11-23
   - [x] move all NPL Org into gitlab
-  - [x] Complete linear PR (31.01.2022)
-  - [x] Write abstract for Dependent types talk in March (05.02.2022)
+  - [x] Complete linear PR ✅ 2022-01-31
+  - [x] Write abstract for Dependent types talk in March ✅ 2022-02-05
 
 
 ## 3 Myrmidon language
@@ -160,8 +151,8 @@ inherit the number of the project they belong to.
     - [x] 3.7.2 fix subst  (17.11.2021)
     - [x] 3.7.3 fix Quoting  (17.11.2021)
     - [x] 3.7.4 Abstract over the grades in context (14.12.2021)
-      - NOTE: this was already done but I just noticed today (14.12.2021)
-  - [x] 3.9 Add a Scheme codegen (04.01.2022)
+      - NOTE: this was already done but I just noticed today ✅ 2021-12-14
+  - [x] 3.9 Add a Scheme codegen ✅ 2022-01-04
 
 ## 5 OpenGames things
   - [x] 5.1 use mwc-prob to port to singletons

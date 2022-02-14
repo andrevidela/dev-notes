@@ -1,0 +1,191 @@
+{
+  "workspaces": {
+    "All": {
+      "main": {
+        "id": "29c22a8e60f56e8d",
+        "type": "split",
+        "children": [
+          {
+            "id": "356dab4974796f6f",
+            "type": "split",
+            "children": [
+              {
+                "id": "0380926b90dfead1",
+                "type": "leaf",
+                "dimension": 33.455882352941174,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "docs/Task Management/Myrmidon.md",
+                    "mode": "source"
+                  }
+                },
+                "group": "07edc1b87d11af67"
+              },
+              {
+                "id": "71cd9cc7bf6cc897",
+                "type": "leaf",
+                "dimension": 41.10294117647059,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "docs/Task Management/Myrmidon.md",
+                    "mode": "preview"
+                  }
+                },
+                "group": "07edc1b87d11af67"
+              },
+              {
+                "id": "045e0bbefb161878",
+                "type": "leaf",
+                "dimension": 25.441176470588236,
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "docs/Todo view.md",
+                    "mode": "preview"
+                  },
+                  "pinned": true
+                }
+              }
+            ],
+            "direction": "vertical"
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "b2aac4a5b890e6c3",
+        "type": "mobile-drawer",
+        "children": [
+          {
+            "id": "6672af6303c59611",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8f9c6971dd8cdfa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 0
+      },
+      "right": {
+        "id": "5b2fbb8406bf1a5c",
+        "type": "mobile-drawer",
+        "children": [
+          {
+            "id": "f6ff028d7c8f06fa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Task Management/Myrmidon.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 0
+      },
+      "active": "0380926b90dfead1"
+    },
+    "Todo view": {
+      "main": {
+        "id": "29c22a8e60f56e8d",
+        "type": "split",
+        "children": [
+          {
+            "id": "0380926b90dfead1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Todo view.md",
+                "mode": "preview"
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "b2aac4a5b890e6c3",
+        "type": "mobile-drawer",
+        "children": [
+          {
+            "id": "6672af6303c59611",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8f9c6971dd8cdfa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 0
+      },
+      "right": {
+        "id": "5b2fbb8406bf1a5c",
+        "type": "mobile-drawer",
+        "children": [
+          {
+            "id": "f6ff028d7c8f06fa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Todo view.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 0
+      },
+      "active": "0380926b90dfead1"
+    }
+  },
+  "active": "All"
+}

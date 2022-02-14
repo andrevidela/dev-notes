@@ -1,0 +1,84 @@
+{
+  "main": {
+    "id": "29c22a8e60f56e8d",
+    "type": "split",
+    "children": [
+      {
+        "id": "356dab4974796f6f",
+        "type": "split",
+        "children": [
+          {
+            "id": "0380926b90dfead1",
+            "type": "leaf",
+            "dimension": 33.455882352941174,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Done last week.md",
+                "mode": "source"
+              }
+            },
+            "group": "07edc1b87d11af67"
+          },
+          {
+            "id": "71cd9cc7bf6cc897",
+            "type": "leaf",
+            "dimension": 41.10294117647059,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Done last week.md",
+                "mode": "preview"
+              }
+            },
+            "group": "07edc1b87d11af67"
+          },
+          {
+            "id": "045e0bbefb161878",
+            "type": "leaf",
+            "dimension": 25.441176470588236,
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Todo view.md",
+                "mode": "preview"
+              },
+              "pinned": true
+            }
+          }
+        ],
+        "direction": "vertical"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b528dc891cb179e9",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "55db982f0dbb3fee",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0380926b90dfead1",
+  "lastOpenFiles": [
+    "docs/Done last week.md",
+    "docs/Task Management/Myrmidon.md",
+    "docs/Todo view.md",
+    "docs/Task Management/Servers Lens tutorial.md",
+    "docs/Task Management/Open servers.md",
+    "docs/Task Management/Open Games.md",
+    "docs/TASKS.md",
+    "docs/Task Management/Graphics.md",
+    "docs/Task Management/Data Generic Programming.md",
+    "docs/Task Management/Mailbox.md"
+  ]
+}

@@ -2,42 +2,64 @@
 ```tasks
 not done
 heading includes mailbox
+hide backlink
+
 ```
 
-## Myrmidon
+## [[Myrmidon]]
 ```tasks
 not done
 heading includes Myrmidon
+hide backlink
 ```
 
-## Open games
+## [[Open Games]]
 
 ```tasks
 not done
 heading includes 5
+hide backlink
+
 ```
 
-## Open servers
+## [[Open servers]]
 
 ```tasks
 not done
 heading includes 6
+hide backlink
+
 ```
 
-## Data Generic programming
+## [[Data Generic Programming]]
 ```tasks
 not done
 heading includes 7
+hide backlink
+
 ```
 
-## Profficiency tutorial
+## [[Idris Profficiency]]
 ```tasks
 not done
 heading includes 8
+hide backlink
+
 ```
 
-## Graphics
+## [[Graphics]]
 ```tasks
 not done
 heading includes 9
+hide backlink
+
+```
+
+## [[Servers Lens tutorial]]
+
+```tasks
+not done
+heading includes 10
+hide backlink
+
 ```

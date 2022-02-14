@@ -1,0 +1,32 @@
+# 10 An optic-based webserver library
+
+- [ ] Round 1
+	- [x] Monomorphic lenses ✅ 2022-02-08
+	- [ ] Polymorphic lenses
+	- [x] Lenses as servers ✅ 2022-02-06
+	- [ ] Combining endpoints
+	- [ ] Dependent lenses
+		- [ ] Lookup affine traversals
+	- [ ] Combining endpoints²
+	- [ ] Building servers
+	- [ ] Parsing URLs
+	- [ ] URL captures
+	- [ ] Implementing Authentication
+	- [ ] Dependent endpoints
+	- [ ] A Domain specific language for servers 
+	- [ ] Another Domain Specific Language
+- [ ]  Round 2
+	- [ ]  Monomorphic lenses
+		- NOTES: Talk about the category of lenses
+	- [ ] Polymorphic lenses
+	- [ ] Lenses as servers 
+	- [ ] Combining endpoints
+	- [ ] Dependent lenses
+	- [ ] Combining endpoints²
+	- [ ] Building servers
+	- [ ] Parsing URLs
+	- [ ] URL captures
+	- [ ] Implementing Authentication
+	- [ ] Dependent endpoints
+	- [ ] A Domain specific language for servers 
+	- [ ] Another Domain Specific Language

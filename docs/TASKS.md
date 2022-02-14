@@ -1,116 +1,13 @@
-# The todo items I'm working on publicly
-
-The mailbox contains unrelated items which needs doing
-Projects are marked with a title and a number. Sub-tasks
-inherit the number of the project they belong to.
-
-
 # Projects :
 
-## 3 Myrmidon language
-  - [ ] 3.3 Add Vect
-  - [ ] 3.4 Add Fins
-    - NOTE: Important for indexing vectors
-  - [ ] 3.5 #2 Add Bools
-    - NOTE: Important for if-then-else
-  - [ ] 3.6 #1 Write tests
-    - [x] 3.6.1 Write parser tests (15.11.2021)
-    - [ ] 3.6.2 /!\ Read files and execute them
-    - [ ] 3.6.3 Read files and compile them
-    - [ ] 3.6.4 figure out how to run a file from the haskell version
-    - [ ] 3.6.5 Write compiler tests based on the haskell version
-  - [ ] 3.7 Experiment with compiler passes
-      - NOTE: Attempt to run linearity checking twice in a row to simulate a biaised semiring
-        by partially evaluating things that are True and then typechecking again to see that none of the
-        erased quantities remain.
-  - [ ] 3.8 Add the funky semiring for both uses and stages
-    - [x] 3.8.1 write definition (07.12.2021)
-    - [ ] 3.8.3 prove that it's actually a semiring
-  - [ ] 3.9 implement co-debruijn indices
-  - [ ] 3.11 write a REPL
+Here are the projects I'm currently working on
 
-## 5 OpenGames things
-  - [ ] 5.3 write an idris version
-    - [x] 5.3.1 port the core opengames logic with lenses (07.11.2021)
-    - [x] 5.3.2 port the parser (08.11.2021)
-    - [x] 5.3.3 port the compiler (09.11.2021)
-    - [x] 5.3.4 port the code generator (11.11.2021)
-    - [x] 5.3.5 figure out why evaluator doesn't reduce (09.12.2021)
-      - NOTE: It works now! but it's really slow, and using the scheme evaluator fails,
-        I don't know why yet but but it seems to be due to scheme, the generated scheme leads to an
-        error when sent to the runtime, so the `eval` function returns an excepption. We catch it
-        but we don't return its diagnostic info, so we need to change that to make it available.
-    - [ ] 5.3.6 Implement type inference
-      - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
-    - [ ] 5.3.7 update the scheme support file to return either rather than Maybe
-  - [ ] 5.5 Write installation instructions for the haskell version
-  - [ ] 5.6 Test the parser in the refactored version ⏫
-     - [ ] 5.6.1 port the code from vlad
-       NOTE:
-       - change all the decision operators to use the ones from philips code (the kleisli stuff)
-       - Stuck because of 5.9
-  - [ ] 5.7 Open games implementation paper
-    - [ ] 5.7.1 Draft chapters
-    - [ ] 5.7.2 Write about scope checking
-  - [ ] 5.8 Move updated project into original repository
-  - [x] 5.9 /!\ implement typed population without implementation ✅ 2022-02-03
+- [[Myrmidon]] A programming language leveraging QTT to control partial evaluation
+- [[Open servers]] A Library to write web servers using lenses
+- [[Open Games]] An programming language to write Open Games
+- [[Idris Profficiency]] A short tutorial to get started with Idris
+- [[Servers Lens tutorial]] A tutorial about open-servers as a library
 
-## 6 Open-Servers
-  - [ ] 6.2 fix the Servant DSL ⏫
-    - NOTE: After the changes to the core, the Servant examples won't work anymore
-  - [ ] 6.5 try out idris-server http server project
-    - [x] 6.5.1 run locally -- doesn't work ✅ 2021-11-10
-    - [x] 6.5.2 Perform the suggested fixes from discord ✅ 2021-11-11
-      - NOTE: didn't work, missing module: TyTTP.Support.Promise
-    - [ ] 6.5.2' Perform the suggested fixes from discord
-      - NOTE: Updated info from package author, need to try again!
-    - [ ] 6.5.3 see if we can interpret LogIO into the node JS server
-  - [ ] 6.7 Try out new lenses
-    - [ ] 6.7.1 try the dependent van-laarhoven
-      - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
-  - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
-    directed containers. Can we convert from one to the other?
-    - [ ] 6.8.1 Implement directed containers
-    - [ ] 6.8.2 Directed containers morphisms as directed containers?
-    - [ ] 6.8.3 dependent lenses as directed containers?
-    - [ ] 6.8.4 directed containers as comonads
-  - [ ] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum
-    and `String.Singleton` instead
-    - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
-      parsing functions
-  - [ ] 6.11 Take a look at Matteo's draft of the paper
-  - [ ] 6.12 Allow dependent endpoints
-  - [ ] 6.13 Tensor in the DSL ⏫
-
-# 7 Data generic programming
-  - [ ] 7.3 write the blog post about CFT
-  - [ ] 7.6 write blog post about Zippers
-
-# 8 Idris proefficiency tutorial
-  - [ ] 8.3 write about data types
-  - [ ] 8.4 write about IO
-  - [ ] 8.5 write about common functions
-  - [ ] 8.6 write about syntax
-  - [ ] 8.7 write instructions to install and use
-  - [x] 8.8 port the new functions to prolude and refactor AOC 2021 (07.12.2021)
-    - [x] 8.8.1 Day 1 (07.12.2021)
-    - [x] 8.8.2 Day 2 (07.12.2021)
-    - [x] 8.8.3 Day 3 (07.12.2021)
-    - [x] 8.8.4 Day 4 (07.12.2021)
-    - [x] 8.8.5 Day 5 (07.12.2021)
-    - [x] 8.8.6 Day 6 (07.12.2021)
-    - [x] 8.8.7 Day 7 (07.12.2021)
-    - [ ] 8.8.8 Day 8
-    - [ ] 8.8.9 Day 9
-    - [ ] 8.8.10 Day 10
-    - [ ] 8.8.11 Day 11
-    - [ ] 8.8.12 Day 12
-
-# 9 Graphics
-  - [ ] 9.1 Draw logo for DJSON
-  - [ ] 9.3 Draw logo for Prolude
-  - [ ] 9.4 update logo for Open servers
-  - [ ] 9.5 Draw logo for AOC
 
 ---------------------------------------------------------------------------------
 

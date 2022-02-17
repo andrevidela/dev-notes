@@ -9,8 +9,8 @@
     - [ ] 6.5.2' Perform the suggested fixes from discord
       - NOTE: Updated info from package author, need to try again!
     - [ ] 6.5.3 see if we can interpret LogIO into the node JS server
-  - [ ] 6.7 Try out new lenses
-    - [ ] 6.7.1 try the dependent van-laarhoven
+  - [-] ~~6.7 Try out new lenses~~
+    - [-] ~~6.7.1 try the dependent van-laarhoven~~
       - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
   - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
     directed containers. Can we convert from one to the other?
@@ -22,9 +22,11 @@
     and `String.Singleton` instead
     - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
       parsing functions
-  - [ ] 6.11 Take a look at Matteo's draft of the paper
-  - [ ] 6.12 Allow dependent endpoints
-  - [ ] 6.13 Tensor in the DSL ⏫
-    - [ ] 6.13.1 Finish writing the tensor examples
-    - [ ] 6.13.2 Port indexed interfaces to container interfaces
+  - [x] 6.11 Take a look at Matteo's draft of the paper ✅ 2022-02-17
+  - [ ] 6.12 Allow dependent endpoints ⏫
+  - [x] 6.13 Tensor in the DSL ⏫ ✅ 2022-02-17
+    - [x] 6.13.1 Finish writing the tensor examples ✅ 2022-02-17
+  - [ ] 6.14 Port indexed interfaces to container interfaces
+  - [ ] 6.15 implement state as directed container
+  - [ ] 6.16 implement servers as bidirectional lenses for each endpoints
 

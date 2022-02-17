@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Done last week.md",
+                "file": "docs/Task Management/Open servers.md",
                 "mode": "source"
               }
             },
@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Done last week.md",
+                "file": "docs/Task Management/Open servers.md",
                 "mode": "preview"
               }
             },
@@ -56,7 +56,22 @@
   "left": {
     "id": "b528dc891cb179e9",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "fb7230770bb51d95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7315b2503abe282",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 300
   },
@@ -70,12 +85,12 @@
   },
   "active": "0380926b90dfead1",
   "lastOpenFiles": [
+    "docs/Task Management/Open servers.md",
+    "docs/Task Management/Servers Lens tutorial.md",
+    "docs/Task Management/Open Games.md",
+    "docs/Todo view.md",
     "docs/Done last week.md",
     "docs/Task Management/Myrmidon.md",
-    "docs/Todo view.md",
-    "docs/Task Management/Servers Lens tutorial.md",
-    "docs/Task Management/Open servers.md",
-    "docs/Task Management/Open Games.md",
     "docs/TASKS.md",
     "docs/Task Management/Graphics.md",
     "docs/Task Management/Data Generic Programming.md",

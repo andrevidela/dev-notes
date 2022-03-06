@@ -1,6 +1,8 @@
 module Permutations
 
+import Data.Fin
 import Data.Vect
+import Decidable.Equality
 
 %default total
 
@@ -44,32 +46,52 @@ namespace List
 data Permutation : (length, range : Nat) -> Type where
 find : Fin n -> Permutation l n -> Bool
 
-
 data Permutation : (length, range : Nat) -> Type where
     Empty : Permutation 0 n
     More : (v : Fin n) -> (p : Permutation l n)
     -> {auto notIn : (find v p) = False} -> Permutation (S l) n
 
 find v Empty = False
-find x (More v rest) = case x == v of True => True ; False => find x rest
+find x (More v rest) with (decEq x v)
+  find x (More x rest) | Yes Refl = True
+  _ | No _ = find x rest
 
-append : (v : Fin n) -> (p : Permutation l n) -> {auto notIn : find v p = False} -> Permutation (S l) n
-findPrf : {x, v : _} -> (p : Permutation l n) -> find x p = False -> find v p = False -> x == v = False -> find x (append v p) = False
-findPrf Empty prf prf1 prf2 with (x == v) proof p0
-  findPrf Empty prf prf1 prf2 | False = ?findPrf_rhs_0_rhs0_0
-  findPrf Empty prf prf1 prf2 | True = absurd prf2
-findPrf (More y p) prf prf1 prf2 = ?findPrf_rhs_1
+-- append : (insert: Fin n) -> (p : Permutation l n) -> {auto notIn : find insert p = False} -> Permutation (S l) n
+--
+-- findPrf : {x, v : _} -> (p : Permutation l n) -> find x p = False -> find v p = False -> Not (v = x) -> find x (append v p) = False
+-- findPrf Empty prf prf1 prf2 with (decEq v x)
+--   _ | Yes yes = void (prf2 yes)
+--   findPrf Empty prf prf1 prf2 | No no = ?whui
+-- findPrf (More y p) prf prf1 prf2 = ?findPrf_rhs_1
 
-append v Empty = More v Empty -- {notIn = Refl}
-append x (More v p {notIn = prf}) {notIn = prf2} with (x == v) proof prf3
-  _ | True =  absurd prf2
-  _ | False = More v (append x p {notIn = prf2}) {notIn = findPrf ?n ?m ?b ?nii}
+-- append v Empty = More v Empty -- {notIn = Refl}
+-- append insert (More pop p {notIn = prf}) {notIn = prf2} with (decEq insert pop) proof prf3
+--   append insert (More insert p {notIn = prf}) | Yes Refl = absurd prf2
+--   _ | No con = More pop (append insert p {notIn = prf2}) {notIn = findPrf p prf prf2 con}
+--
+--
+-- reverse : Permutation l n -> Permutation l n
+-- reverse Empty = Empty
+-- reverse (More v p {notIn}) = append v {notIn = ?revNotIn notIn} (reverse p)
+--
+
+weaken : Permutation l n -> Permutation l (S n)
+findWeaken : {v, p : _} -> find v p = False -> find (Fin.weaken v) (Permutations.weaken p) = False
+
+weaken Empty = Empty
+weaken (More v p {notIn = prf}) = More (weaken v) (weaken p) {notIn = findWeaken prf}
+
+findWeaken prf with (weaken v)
+  findWeaken prf | FZ with (weaken p)
+    findWeaken prf | FZ | Empty = Refl
+    findWeaken prf | FZ | (More x y {notIn = prf2}) = ?rest_rhst_0_rhs0_1
+  findWeaken prf | (FS x) = ?rest_rhst_1
 
 
-reverse : Permutation l n -> Permutation l n
-reverse Empty = Empty
-reverse (More v p {notIn}) = append v {notIn = ?revNotIn notIn} (reverse p)
 
+reversePermutation : (l : Nat) -> Permutation l l
+reversePermutation 0 = Empty
+reversePermutation (S k) = More ?reversePermutation_rhs_1 {notIn = ?notFound} (weaken $ reversePermutation k)
 
 
 range : (n : Nat) -> Vect n (Fin n)

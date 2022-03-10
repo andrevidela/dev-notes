@@ -185,7 +185,147 @@
         "currentTab": 0
       },
       "active": "0380926b90dfead1"
+    },
+    "kanban": {
+      "main": {
+        "id": "29c22a8e60f56e8d",
+        "type": "split",
+        "children": [
+          {
+            "id": "0380926b90dfead1",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "docs/Kanban/Writing board.md"
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "b528dc891cb179e9",
+        "type": "split",
+        "children": [
+          {
+            "id": "fb7230770bb51d95",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e7315b2503abe282",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "e004fc4b4b74107b",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "55db982f0dbb3fee",
+        "type": "split",
+        "children": [
+          {
+            "id": "4d74fcfe51cd671a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8aaafa31902bda7a",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "docs/Kanban/Writing board.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "0380926b90dfead1"
+    },
+    "last week": {
+      "main": {
+        "id": "29c22a8e60f56e8d",
+        "type": "split",
+        "children": [
+          {
+            "id": "0380926b90dfead1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Done last week.md",
+                "mode": "preview"
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "9f992b9c7aca25c9",
+        "type": "split",
+        "children": [
+          {
+            "id": "90afe51dc43bf3dc",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d9ce92516771ffbf",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "c9ae0b0abea505d0",
+        "type": "split",
+        "children": [],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "0380926b90dfead1"
     }
   },
-  "active": "All"
+  "active": "kanban"
 }

@@ -4,96 +4,85 @@
     "type": "split",
     "children": [
       {
-        "id": "356dab4974796f6f",
-        "type": "split",
-        "children": [
-          {
-            "id": "0380926b90dfead1",
-            "type": "leaf",
-            "dimension": 33.455882352941174,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Task Management/Open servers.md",
-                "mode": "source"
-              }
-            },
-            "group": "07edc1b87d11af67"
-          },
-          {
-            "id": "71cd9cc7bf6cc897",
-            "type": "leaf",
-            "dimension": 41.10294117647059,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Task Management/Open servers.md",
-                "mode": "preview"
-              }
-            },
-            "group": "07edc1b87d11af67"
-          },
-          {
-            "id": "045e0bbefb161878",
-            "type": "leaf",
-            "dimension": 25.441176470588236,
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Todo view.md",
-                "mode": "preview"
-              },
-              "pinned": true
-            }
+        "id": "0380926b90dfead1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "docs/Todo view.md",
+            "mode": "preview",
+            "source": true
           }
-        ],
-        "direction": "vertical"
+        }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "b528dc891cb179e9",
-    "type": "split",
+    "id": "7c7dbea849bf45e1",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "fb7230770bb51d95",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e7315b2503abe282",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
+        "id": "7bad09dc341b7e18",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "d28590cf64af1f48",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
           }
-        ]
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 300
+    "currentTab": 0
   },
   "right": {
-    "id": "55db982f0dbb3fee",
-    "type": "split",
-    "children": [],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "id": "9bab09daf70f7eb9",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "17e71b0a066d1a10",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "docs/Todo view.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
   },
   "active": "0380926b90dfead1",
   "lastOpenFiles": [
-    "docs/Task Management/Open servers.md",
-    "docs/Task Management/Servers Lens tutorial.md",
-    "docs/Task Management/Open Games.md",
     "docs/Todo view.md",
-    "docs/Done last week.md",
-    "docs/Task Management/Myrmidon.md",
     "docs/TASKS.md",
+    "docs/Task Management/Mailbox.md",
     "docs/Task Management/Graphics.md",
-    "docs/Task Management/Data Generic Programming.md",
-    "docs/Task Management/Mailbox.md"
+    "docs/Kanban/Writing board.md",
+    "docs/Task Management/Idris Profficiency.md",
+    "docs/Task Management/Myrmidon.md",
+    "docs/index.md",
+    "docs/Done last week.md",
+    "docs/Programming/05. Data Generic Programming.md"
   ]
 }

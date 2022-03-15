@@ -30,7 +30,7 @@ public export
 public export
 data FreshVect : Nat -> (a : Type) -> (neq : BRel a) -> Type where
   Nil  : FreshVect Z a neq
-  (::) : (x : a) -> (xs : FreshVect l a neq) ->
+  (::) : (1 x : a) -> (1 xs : FreshVect l a neq) ->
          {auto 0 fresh : x # xs} ->
          FreshVect (S l) a neq
 

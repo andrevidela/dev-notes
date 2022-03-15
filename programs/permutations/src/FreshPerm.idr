@@ -3,7 +3,10 @@ module FreshPerm
 
 import FreshList
 import Data.Fin
-import Data.Vect
+-- import Data.Vect
+import Data.List
+import Data.Linear.LVect
+import Data.Linear
 
 ||| An arrangement is a list of fins of a given length
 ||| and range.
@@ -85,16 +88,23 @@ export
 identityPermutation : (n : Nat) -> Permutation n
 identityPermutation n = reverse (reversePermutation n)
 
-extractVal : (Fin (S n)) -> Vect (S n) a -> (a, Vect n a)
+extractVal : (Fin (S n)) -> LVect (S n) a -> (a, LVect n a)
 extractVal FZ (x :: xs) = (x, xs)
 extractVal (FS FZ) (y :: (x :: xs)) = (x, y :: xs)
 extractVal (FS (FS x)) (y :: (z :: xs)) with (extractVal (FS x) (z :: xs))
   extractVal (FS (FS x)) (y :: (z :: xs)) | (k, ks) = (k, y :: ks)
 
-applyPermutation : (1 _ : Permutation n) -> (1 _ : Vect n a) -> Vect n a
-applyPermutation [] [] = []
-applyPermutation (x :: xs) (y :: ys) =
-  let (val, res) = extractVal x (y :: ys) in
-      val :: applyPermutation ?kek res
+
+toLVect : Arrangement l n -@ LVect l (Fin n)
+toLVect [] = []
+toLVect (x :: xs) = x :: toLVect xs
+
+fromVect : (f : LVect l (Fin n) -@ LVect l (Fin n)) -> {0 original : Arrangement l n} -> (1 vect : LVect l (Fin n)) ->
+           {auto prf : vect = f (FreshPerm.toLVect original)} -> Arrangement l n
+fromVect f vect {original} {prf} = ?fromVect_rhs
+
+convertPermutation : {n : Nat} -> (f : {0 a : Type} -> LVect n a -@ LVect n a) -> Permutation n -@ Permutation n
+convertPermutation f xs = fromVect (f {a = Fin n}) {original = xs} (f (toLVect xs))
+
 
 

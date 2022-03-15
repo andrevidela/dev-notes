@@ -1,4 +1,4 @@
 package permutations
 
-depends = contrib
+depends = contrib, linear
 sourcedir = "src"

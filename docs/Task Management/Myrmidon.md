@@ -19,3 +19,4 @@
     - [ ] 3.8.3 prove that it's actually a semiring
   - [ ] 3.9 implement co-debruijn indices
   - [ ] 3.11 write a REPL
+  - [ ] 3.12 attempt a affine type system using `0`, `0-1`, `1`, `1-ω` and `ω` where `0<ω` , `1 < 1-ω` and `0-1 < 1`

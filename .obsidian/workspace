@@ -9,9 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/Todo view.md",
-            "mode": "preview",
-            "source": true
+            "file": "docs/Task Management/Servers Lens tutorial.md",
+            "mode": "preview"
           }
         }
       }
@@ -19,70 +18,85 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7c7dbea849bf45e1",
-    "type": "mobile-drawer",
+    "id": "b528dc891cb179e9",
+    "type": "split",
     "children": [
       {
-        "id": "7bad09dc341b7e18",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "d28590cf64af1f48",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "fb7230770bb51d95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7315b2503abe282",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e004fc4b4b74107b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300
   },
   "right": {
-    "id": "9bab09daf70f7eb9",
-    "type": "mobile-drawer",
+    "id": "55db982f0dbb3fee",
+    "type": "split",
     "children": [
       {
-        "id": "17e71b0a066d1a10",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "docs/Todo view.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "4d74fcfe51cd671a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8aaafa31902bda7a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Task Management/Servers Lens tutorial.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
   },
   "active": "0380926b90dfead1",
   "lastOpenFiles": [
+    "docs/Task Management/Servers Lens tutorial.md",
+    "docs/Task Management/Open Games.md",
+    "docs/Task Management/Myrmidon.md",
+    "docs/Task Management/Open servers.md",
+    "docs/Task Management/Data Generic Programming.md",
     "docs/Todo view.md",
-    "docs/TASKS.md",
+    "docs/index.md",
     "docs/Task Management/Mailbox.md",
     "docs/Task Management/Graphics.md",
-    "docs/Kanban/Writing board.md",
-    "docs/Task Management/Idris Profficiency.md",
-    "docs/Task Management/Myrmidon.md",
-    "docs/index.md",
-    "docs/Done last week.md",
-    "docs/Programming/05. Data Generic Programming.md"
+    "docs/Kanban/Writing board.md"
   ]
 }

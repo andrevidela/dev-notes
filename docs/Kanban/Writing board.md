@@ -6,13 +6,13 @@ kanban-plugin: basic
 
 ## To do
 
-- [ ] Fix titlescase
-- [ ] Change size of texttt
 
 
 ## Done
 
 **Complete**
+- [x] Fix titlescase
+- [x] Change size of texttt
 - [x] color code samples
 - [x] fix smallsc for mentions of recombine
 - [x] mention the plan in the intro

@@ -1,5 +1,6 @@
 # 10 An optic-based webserver library
 
+- [ ] Steal content from ICFP paper
 - [ ] Round 1
 	- [x] Monomorphic lenses ✅ 2022-02-08
 	- [ ] Polymorphic lenses

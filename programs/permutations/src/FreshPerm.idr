@@ -3,7 +3,7 @@ module FreshPerm
 
 import FreshList
 import Data.Fin
--- import Data.Vect
+import Data.Vect
 import Data.List
 import Data.Linear.LVect
 import Data.Linear
@@ -105,6 +105,47 @@ fromVect f vect {original} {prf} = ?fromVect_rhs
 
 convertPermutation : {n : Nat} -> (f : {0 a : Type} -> LVect n a -@ LVect n a) -> Permutation n -@ Permutation n
 convertPermutation f xs = fromVect (f {a = Fin n}) {original = xs} (f (toLVect xs))
+
+consumeAll : Void -> x -@ a
+consumeAll _ impossible
+
+toFunction : LVect (S n) a -@ Fin (S n) -@ LPair a (LVect n a)
+toFunction (x :: xs) FZ = x # xs
+toFunction (y :: []) (FS x) = consumeAll (uninhabited x) y
+toFunction (y :: (z :: xs)) (FS x) =
+  let x' # xs' = toFunction (z :: xs) x in
+      x' # y :: xs'
+
+indexL : LVect n a -> Fin n -> a
+indexL (x :: xs) FZ = x
+indexL (y :: xs) (FS x) = indexL xs x
+
+permutationIndex : Arrangement l n -> Fin l -@ Fin n
+permutationIndex (x :: xs) FZ = x
+permutationIndex (p :: ps) (FS x) = permutationIndex ps x
+
+fromPermutation : Permutation (S n) -> LVect (S n) a -@ Fin (S n) -@ LPair a (LVect n a)
+fromPermutation permutations vec idx =
+  let 1 newIndex = permutationIndex permutations idx
+  in toFunction vec newIndex
+
+fromPermutation' : Permutation n -> LVect n a -> Fin n -> a
+fromPermutation' xs ys idx =
+  let newIndex = permutationIndex xs idx
+  in indexL ys newIndex
+
+tabulate' : {len : Nat} -> (Fin len -> a) -> LVect len a
+tabulate' {len = Z} f = []
+tabulate' {len = S _} f = f FZ :: tabulate' (f . FS)
+
+-- we have a permutation, which is a list of `Fin n`
+-- we have a vector of length n
+-- we want to obtain the vector of length n for which each `Fin` corresponds to a position in the permutation
+convertVect : {n : Nat} -> Permutation n -> LVect n a -> LVect n a
+convertVect xs ys = tabulate' (fromPermutation' xs ys)
+
+
+
 
 
 

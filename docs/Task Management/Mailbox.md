@@ -7,4 +7,7 @@
       - NOTE: we need to pull the repository into a temp directory checkout and then copy back into sources
     - [x] Support legacy instructions ✅ 2022-02-06
       - NOTE: We need to know where the ipkg file is, and then run the install script# Mailbox
-- [ ] split tasks into smaller files and use quick add to add items to them
+- [x] split tasks into smaller files and use quick add to add items to them ✅ 2022-03-18
+- [ ] permutations `Fin n -> a`
+- [x] connect to the game controller ✅ 2022-03-21
+- [ ] finish preparing talk to BCS

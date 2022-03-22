@@ -13,7 +13,7 @@
       - NOTE: types of the block are the boundary of the lens, the states are the products of the state of the lines
     - [ ] 5.3.7 update the scheme support file to return either rather than Maybe
   - [ ] 5.5 Write installation instructions for the haskell version
-  - [ ] 5.6 Test the parser in the refactored version ⏫
+  - [x] 5.6 Test the parser in the refactored version ⏫ ✅ 2022-03-18
      - [ ] 5.6.1 port the code from vlad
        NOTE:
        - change all the decision operators to use the ones from philips code (the kleisli stuff)
@@ -21,7 +21,7 @@
   - [ ] 5.7 Open games implementation paper
     - [ ] 5.7.1 Draft chapters
     - [ ] 5.7.2 Write about scope checking
-  - [ ] 5.8 Move updated project into original repository ⏫
+  - [x] 5.8 Move updated project into original repository ⏫ ✅ 2022-03-18
     - [x] 5.8.1 Tag Version 0.1 of Open games ✅ 2022-02-09
     - [ ] 5.8.2 Adapt the directory structure and namespaces of Philipp's fork from old OG Master
     - [ ] 5.8.3 overwrite master with Philip's updated fork

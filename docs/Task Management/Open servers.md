@@ -35,4 +35,6 @@
 	  - issue #44
   - [ ] 6.16 implement servers as bidirectional lenses for each endpoints
 	  - issue #42
+  - [ ] 6.17 finish database example
+  - [ ] 6.18 add error management with co-parameter
 

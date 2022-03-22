@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/Task Management/Servers Lens tutorial.md",
+            "file": "docs/Todo view.md",
             "mode": "preview"
           }
         }
@@ -18,34 +18,19 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b528dc891cb179e9",
+    "id": "50bd27f6f41c66be",
     "type": "split",
     "children": [
       {
-        "id": "fb7230770bb51d95",
+        "id": "68007593edbd537d",
         "type": "tabs",
         "children": [
           {
-            "id": "e7315b2503abe282",
+            "id": "bb3304b767149728",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {}
-            }
-          },
-          {
-            "id": "e004fc4b4b74107b",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
             }
           }
         ]
@@ -55,48 +40,24 @@
     "width": 300
   },
   "right": {
-    "id": "55db982f0dbb3fee",
+    "id": "b712989ec29ef2fa",
     "type": "split",
-    "children": [
-      {
-        "id": "4d74fcfe51cd671a",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "8aaafa31902bda7a",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "docs/Task Management/Servers Lens tutorial.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          }
-        ]
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
   "active": "0380926b90dfead1",
   "lastOpenFiles": [
-    "docs/Task Management/Servers Lens tutorial.md",
-    "docs/Task Management/Open Games.md",
-    "docs/Task Management/Myrmidon.md",
-    "docs/Task Management/Open servers.md",
-    "docs/Task Management/Data Generic Programming.md",
     "docs/Todo view.md",
+    "docs/TASKS.md",
+    "docs/Task Management/Control room.md",
     "docs/index.md",
     "docs/Task Management/Mailbox.md",
-    "docs/Task Management/Graphics.md",
-    "docs/Kanban/Writing board.md"
+    "docs/Task Management/Myrmidon.md",
+    "docs/Task Management/Open Games.md",
+    "docs/Task Management/Open servers.md",
+    "docs/Task Management/Data Generic Programming.md",
+    "docs/Done last week.md"
   ]
 }

@@ -7,6 +7,7 @@ import Data.Vect
 import Data.List
 import Data.Linear.LVect
 import Data.Linear
+import Data.Either
 
 ||| An arrangement is a list of fins of a given length
 ||| and range.
@@ -124,7 +125,7 @@ permutationIndex : Arrangement l n -> Fin l -@ Fin n
 permutationIndex (x :: xs) FZ = x
 permutationIndex (p :: ps) (FS x) = permutationIndex ps x
 
-fromPermutation : Permutation (S n) -> LVect (S n) a -@ Fin (S n) -@ LPair a (LVect n a)
+fromPermutation : Permutation (S n) -> LVect (S n) a -> Fin (S n) -> LPair a (LVect n a)
 fromPermutation permutations vec idx =
   let 1 newIndex = permutationIndex permutations idx
   in toFunction vec newIndex
@@ -138,13 +139,64 @@ tabulate' : {len : Nat} -> (Fin len -> a) -> LVect len a
 tabulate' {len = Z} f = []
 tabulate' {len = S _} f = f FZ :: tabulate' (f . FS)
 
+0 (.π2) : LPair a b -> b
+(.π2) (a # b) = b
+
+pairElim : (a -@ b) -@ (x -@ y) -@ LPair a x -@ LPair b y
+
+lminus : Fin (S (S n)) -@ Fin (S n)
+lminus FZ = FZ
+lminus (FS FZ) = FZ
+lminus (FS (FS x)) = lminus (weaken (FS x))
+
+
+-- indexAT is the index that we are picking from the arrangelemnt
+-- As an example, if we have the arrangement [4,3,2,1,0]
+-- and we pick out the value at position 2, we extract the index 3
+-- which means, we end up with the result (3 # [4,2,1,0]) if we were
+-- to not do anything to the arrangement. Of course, this result in
+-- an invalid permutation, because of this, we need to strengthen
+-- all indicies that are higher than our plucked out index. This is
+-- `indexAt`.
+-- After strengthening, the result should be: (3 # [3,2,1,0])
+-- This is because, the next valid index in the array after
+linStrength : {n : Nat} -> (1 indexAt : Fin (S n)) -> Arrangement l (S n) -@ Arrangement l n
+linStrength {n = Z} FZ [] = []
+linStrength {n = Z} FZ (FZ :: xs) = ?linStrength_rhs_6
+linStrength {n = Z} FZ ((FS x) :: xs) = ?linStrength_rhs_7
+linStrength {n = (S k)} FZ xs = ?linStrength_rhs_3
+linStrength {n = n} (FS x) xs = ?linStrength_rhs_1
+
+
+
+Duplicable (Fin n) where
+  duplicate FZ = [FZ, FZ]
+  duplicate (FS x) = [FS x, FS x]
+
+linearPermutationIndex : {n: Nat} -> (1 a : Arrangement (S l) (S n)) -> Fin (S l) -@ LPair (Fin (S n)) (Arrangement l n)
+linearPermutationIndex (x :: xs) FZ = let x1 # x2 = pair (duplicate x) in x1 # linStrength x2 xs
+linearPermutationIndex (x :: xs) (FS i) = ?linearPermutationIndex_rhs_3
+
+
+-- 1
+-- 3 [0,1,2,3,4,5]
+-- -> 3, [0,1,2,_,4,5]
+-- 2 [0,1,2,_,4,5]??
+indexWithPermutation : Permutation (S n) -> Fin (S n) -> LVect (S n) a -> (a, LVect n a, Permutation n)
+indexWithPermutation {n = 0} xs x (y :: []) = (y, ([], []))
+indexWithPermutation {n = (S n)} xs x (y :: (z :: ys)) =
+  let val # vec = fromPermutation xs (y :: z :: ys) x in ?indexWithPermutation_rhs_2
+
+
 -- we have a permutation, which is a list of `Fin n`
 -- we have a vector of length n
 -- we want to obtain the vector of length n for which each `Fin` corresponds to a position in the permutation
-convertVect : {n : Nat} -> Permutation n -> LVect n a -> LVect n a
-convertVect xs ys = tabulate' (fromPermutation' xs ys)
+convertVect : {n : Nat} -> Permutation n -> LVect n a -@ LVect n a
 
 
+
+-- testReverse : convertVect (reversePermutation 4) [1,2,3,4] === [4,3,2,1]
+-- testReverse = Refl
 
 
 

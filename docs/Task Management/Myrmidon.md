@@ -6,8 +6,8 @@
     - NOTE: Important for if-then-else
   - [ ] 3.6 Write tests
     - [x] 3.6.1 Write parser tests (15.11.2021)
-    - [ ] 3.6.2 /!\ Read files and execute them
-    - [ ] 3.6.3 Read files and compile them
+    - [x] 3.6.2 /!\ Read files and execute them ✅ 2022-03-31
+    - [x] 3.6.3 Read files and compile them ✅ 2022-03-31
     - [ ] 3.6.4 figure out how to run a file from the haskell version
     - [ ] 3.6.5 Write compiler tests based on the haskell version
   - [ ] 3.7 Experiment with compiler passes
@@ -21,3 +21,7 @@
   - [ ] 3.11 write a REPL
   - [ ] 3.12 attempt a affine type system using `0`, `0-1`, `1`, `1-ω` and `ω` where `0<ω` , `1 < 1-ω` and `0-1 < 1`
   - [ ] 3.13 add data types and case
+  - [ ] 3.14 figure out multiplicty inference
+	  - THe problem when desugaring an applicaton is taht we do not know which multiplicity to use
+  - [ ] 3.15 implement scheme backend
+	  - note: currently we export s-expr but it would be nice to have a way to run those programs

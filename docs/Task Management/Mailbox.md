@@ -8,6 +8,13 @@
     - [x] Support legacy instructions ✅ 2022-02-06
       - NOTE: We need to know where the ipkg file is, and then run the install script# Mailbox
 - [x] split tasks into smaller files and use quick add to add items to them ✅ 2022-03-18
-- [ ] permutations `Fin n -> a`
+- [x] permutations `Fin n -> a` ✅ 2022-03-22
 - [x] connect to the game controller ✅ 2022-03-21
 - [ ] finish preparing talk to BCS
+- [ ] permutations, make a type that track values that have been plucked out
+- [ ] Setup the benchmark server
+	- [x] Install OS ✅ 2022-03-28
+	- [ ] setup SSH keys
+	- [ ] setup Mosh
+	- [ ] Install Idris + Chez
+	- [ ] run some benchmarks

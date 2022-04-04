@@ -14,15 +14,11 @@
   - [-] ~~6.7 Try out new lenses~~
     - [-] ~~6.7.1 try the dependent van-laarhoven~~
       - `Functor f => ((i : a) -> {0 b : a -> Type} -> f (b i)) -> (i : s) -> {0 t : s -> Type} -> f (t i)`
-  - [ ] 6.8 dependent lenses are morphisms between containers. Comonads are morphisms between
-    directed containers. Can we convert from one to the other?
-    - [ ] 6.8.1 Implement directed containers
-    - [ ] 6.8.2 Directed containers morphisms as directed containers?
-    - [ ] 6.8.3 dependent lenses as directed containers?
-    - [ ] 6.8.4 directed containers as comonads
-  - [ ] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum
+  - [x] ~~6.8 dependent lenses are morphisms between containers. Comonads are morphisms between directed containers. Can we convert from one to the other?~~
+    - Note: they are not directed containers but database might be
+  - [x] 6.9 Refactor the `PathComp` Datatype do get rid of `Str` constructor and use product and sum ✅ 2022-03-27
     and `String.Singleton` instead
-    - [ ] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable
+    - [x] 6.9.1 remove the use of `Product` and `Sum` and replace it with a custom type with suitable ✅ 2022-03-27
       parsing functions
   - [x] 6.11 Take a look at Matteo's draft of the paper ✅ 2022-02-17
   - [x] 6.12 Allow dependent endpoints ⏫ ✅ 2022-03-14
@@ -31,10 +27,11 @@
     - [x] 6.13.1 Finish writing the tensor examples ✅ 2022-02-17
   - [x] 6.14 Port indexed interfaces to container interfaces ✅ 2022-03-14
 	  - Not going to work, it messes up inference
-  - [ ] 6.15 implement state as directed container
+  - [x] 6.15 implement state as action ✅ 2022-03-27
 	  - issue #44
-  - [ ] 6.16 implement servers as bidirectional lenses for each endpoints
+  - [x] 6.16 implement servers as bidirectional lenses for each endpoints ✅ 2022-03-27
 	  - issue #42
   - [ ] 6.17 finish database example
   - [ ] 6.18 add error management with co-parameter
+  - [ ] 6.19 implement server communication with node
 

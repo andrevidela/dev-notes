@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/Todo view.md",
-            "mode": "preview"
+            "file": "docs/Task Management/Control room.md",
+            "mode": "source"
           }
         }
       }
@@ -32,6 +32,21 @@
               "type": "file-explorer",
               "state": {}
             }
+          },
+          {
+            "id": "9e9fd7acb8b8a2a8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
         ]
       }
@@ -42,22 +57,46 @@
   "right": {
     "id": "b712989ec29ef2fa",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "bd5899ccbf1ace96",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39dff45e2364fd29",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/Task Management/Control room.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
   "active": "0380926b90dfead1",
   "lastOpenFiles": [
-    "docs/Todo view.md",
-    "docs/TASKS.md",
     "docs/Task Management/Control room.md",
-    "docs/index.md",
+    "Untitled.md",
     "docs/Task Management/Mailbox.md",
     "docs/Task Management/Myrmidon.md",
+    "docs/Done previously.md",
     "docs/Task Management/Open Games.md",
-    "docs/Task Management/Open servers.md",
-    "docs/Task Management/Data Generic Programming.md",
-    "docs/Done last week.md"
+    "docs/Todo view.md",
+    "docs/Programming/06. Lists, Colists and Streams.md",
+    "docs/Programming/05. Data Generic Programming.md",
+    "docs/Programming/07. Introduction to dependent types.md"
   ]
 }

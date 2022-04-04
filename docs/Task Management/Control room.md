@@ -8,5 +8,8 @@ A character input method based on game controllers. Goal:
 # 11 Control room
 
 - [x] Connect to controller ✅ 2022-03-21
-- [ ] Obtain joystick angle
+- [x] Obtain joystick angle ✅ 2022-04-03
+- [ ] convert angle into publishers
+	- get the publisher to print something on the UI
+- [ ] setup git
 - [ ] Test on iOS 

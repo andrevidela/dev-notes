@@ -28,3 +28,5 @@
     - [ ] 5.8.4 rewrite Jules' version in terms of the new master
 
   - [x] 5.9 /!\ implement typed population without implementation ✅ 2022-02-03
+  - [ ] 5.10 implement AMM in terms of new types and deriving via
+    - [ ] 5.10.1 implement testing from State to IO

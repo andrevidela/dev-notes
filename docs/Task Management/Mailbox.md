@@ -10,11 +10,18 @@
 - [x] split tasks into smaller files and use quick add to add items to them ✅ 2022-03-18
 - [x] permutations `Fin n -> a` ✅ 2022-03-22
 - [x] connect to the game controller ✅ 2022-03-21
-- [ ] finish preparing talk to BCS
+- [x] finish preparing talk to BCS ✅ 2022-04-15
 - [ ] permutations, make a type that track values that have been plucked out
 - [ ] Setup the benchmark server
 	- [x] Install OS ✅ 2022-03-28
-	- [ ] setup SSH keys
-	- [ ] setup Mosh
+	- [ ] Setup SSH keys
+	- [ ] Setup Mosh
 	- [ ] Install Idris + Chez
-	- [ ] run some benchmarks
+	- [x] Run some benchmarks ✅ 2022-04-10
+    - [x] Download some benchmarks ✅ 2022-04-10
+    - [x] Run the benchmarks ✅ 2022-04-10
+- [x] submit apache-mime-types and tyttp to `pack` ✅ 2022-07-12
+- [ ] State machines to containers in Haskell 
+- [ ] Functions to containers in haskell
+- [ ] 
+

@@ -9,7 +9,9 @@ A character input method based on game controllers. Goal:
 
 - [x] Connect to controller ✅ 2022-03-21
 - [x] Obtain joystick angle ✅ 2022-04-03
-- [ ] convert angle into publishers
+- [x] convert angle into publishers ✅ 2022-04-10
 	- get the publisher to print something on the UI
-- [ ] setup git
-- [ ] Test on iOS 
+- [x] setup git ✅ 2022-04-10
+- [x] Test on iOS ✅ 2022-04-10
+- [ ] Collect inputs into a string buffer
+- [ ] Make a view for the joystick input

@@ -21,7 +21,11 @@
   - [ ] 3.11 write a REPL
   - [ ] 3.12 attempt a affine type system using `0`, `0-1`, `1`, `1-ω` and `ω` where `0<ω` , `1 < 1-ω` and `0-1 < 1`
   - [ ] 3.13 add data types and case
-  - [ ] 3.14 figure out multiplicty inference
-	  - THe problem when desugaring an applicaton is taht we do not know which multiplicity to use
+  - [ ] 3.14 linearity
+      - [ ] 3.14.1 figure out multiplicty inference
+	    - The problem when desugaring an applicaton is taht we do not know which multiplicity to use
+      - [ ] 3.14.2 implement erasure
+      - [ ] 3.14.3 Implement linearity constraints
   - [ ] 3.15 implement scheme backend
-	  - note: currently we export s-expr but it would be nice to have a way to run those programs
+	  - note: currently we export s-expr but it would be nice to have a way to run those program
+  - [ ] 3.16 Figure out pattern matching

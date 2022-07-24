@@ -325,6 +325,58 @@
         "collapsed": true
       },
       "active": "0380926b90dfead1"
+    },
+    "doing on stream": {
+      "main": {
+        "id": "29c22a8e60f56e8d",
+        "type": "split",
+        "children": [
+          {
+            "id": "0380926b90dfead1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Todo now.md",
+                "mode": "preview"
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "815d09a29d6bb21b",
+        "type": "split",
+        "children": [
+          {
+            "id": "921033ad76cc6670",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4e85cff8efa8ea10",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "right": {
+        "id": "de38eb6c3b06816c",
+        "type": "split",
+        "children": [],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "0380926b90dfead1"
     }
   },
   "active": "Todo view"

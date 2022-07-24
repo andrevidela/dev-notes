@@ -1,0 +1,6 @@
+- [x] package manager?  ✅ 2022-05-17
+	- [ ] test bugfix (DOING NOW) 
+	- [ ] PR to change the build step of apache-mime-types as CI
+- [x] lens library??? (tangent) ✅ 2022-05-18
+- [ ] yaffle
+- [x] Server library  ✅ 2022-05-19

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "docs/Task Management/Control room.md",
+            "file": "docs/TASKS.md",
             "mode": "source"
           }
         }
@@ -18,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "50bd27f6f41c66be",
+    "id": "8a2988a966552dee",
     "type": "split",
     "children": [
       {
-        "id": "68007593edbd537d",
+        "id": "fba9c335d5b61396",
         "type": "tabs",
         "children": [
           {
-            "id": "bb3304b767149728",
+            "id": "bd64b111657a0fa9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,7 +34,7 @@
             }
           },
           {
-            "id": "9e9fd7acb8b8a2a8",
+            "id": "24eb5ec163847903",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -55,20 +55,20 @@
     "width": 300
   },
   "right": {
-    "id": "b712989ec29ef2fa",
+    "id": "c89c7bccd9834ce6",
     "type": "split",
     "children": [
       {
-        "id": "bd5899ccbf1ace96",
+        "id": "abbc4d38457a8e80",
         "type": "tabs",
         "children": [
           {
-            "id": "39dff45e2364fd29",
+            "id": "a9b0d87b2a5b0356",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Task Management/Control room.md",
+                "file": "docs/TASKS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "0380926b90dfead1",
   "lastOpenFiles": [
-    "docs/Task Management/Control room.md",
-    "Untitled.md",
-    "docs/Task Management/Mailbox.md",
-    "docs/Task Management/Myrmidon.md",
-    "docs/Done previously.md",
-    "docs/Task Management/Open Games.md",
+    "docs/TASKS.md",
+    "docs/index.md",
     "docs/Todo view.md",
-    "docs/Programming/06. Lists, Colists and Streams.md",
-    "docs/Programming/05. Data Generic Programming.md",
-    "docs/Programming/07. Introduction to dependent types.md"
+    "docs/Task Management/Myrmidon.md",
+    "docs/Task Management/Open Games.md",
+    "docs/Task Management/Open servers.md",
+    "docs/Task Management/Servers Lens tutorial.md",
+    "docs/Done previously.md",
+    "docs/Task Management/Mailbox.md",
+    "Todo now.md"
   ]
 }

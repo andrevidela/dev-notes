@@ -7,6 +7,7 @@
 module FreshList
 
 import public Data.So
+import Data.Fin
 
 %default total
 
@@ -217,6 +218,11 @@ decideFreshness : {neq : BRel a} ->
 decideFreshness x ys with (x ## ys)
   decideFreshness x ys | True  = Yes Oh
   decideFreshness x ys | False = No absurd
+
+public export
+index : Fin n -> FreshVect n a neq -> a
+index FZ (x :: xs) = x
+index (FS x) (y :: xs) = index x xs
 
 public export
 foldl : (f : b -> a -> b) -> b -> FreshVect l a neq -> b

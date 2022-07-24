@@ -178,6 +178,24 @@ linearPermutationIndex (x :: xs) FZ = let x1 # x2 = pair (duplicate x) in x1 # l
 linearPermutationIndex (x :: xs) (FS i) = ?linearPermutationIndex_rhs_3
 
 
+data Plucked : Vect n Bool -> Arrangement n m -> Type where
+  Unplucked : (arr : Arrangement n m) -> Plucked (replicate n False) arr
+  PluckHere : (plucking : Fin m) -> (rest : Arrangement n m) ->
+              {auto prf : So (plucking ## rest)} -> Plucked (True :: replicate n False)
+                                                            (plucking :: rest)
+  PluckThere : (x : Fin m) -> (a : Arrangement n m) -> {auto prf : So (x ## a)} ->
+               Plucked p a -> Plucked (False :: p) (x :: a)
+
+toPluck : {n : Nat} -> (p : Permutation n) -> Plucked (replicate n False) p
+toPluck p = Unplucked p
+
+pluckAt : (i : Fin n) -> (arr : Arrangement n m) -> {auto notPlucked : index i p = False} -> Plucked p arr -> Plucked (replaceAt i True p) arr
+pluckAt FZ (y :: xs) (PluckHere y xs) {notPlucked = notPlucked} = ?pluckAt_rhs_3
+pluckAt FZ (y :: xs) (PluckThere y xs z) {notPlucked = notPlucked} = ?pluckAt_rhs_4
+
+pluckAt (FS y) arr x {notPlucked = notPlucked} = ?pluckAt_rhs_1
+
+
 -- 1
 -- 3 [0,1,2,3,4,5]
 -- -> 3, [0,1,2,_,4,5]

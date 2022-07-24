@@ -32,6 +32,24 @@
   - [x] 6.16 implement servers as bidirectional lenses for each endpoints ✅ 2022-03-27
 	  - issue #42
   - [ ] 6.17 finish database example
+	  - BLOCKED: Need to deal with 6.18 first
   - [ ] 6.18 add error management with co-parameter
-  - [ ] 6.19 implement server communication with node
+	  - [x] 6.18.1 Implement co-para lenses ✅ 2022-04-13
+	  - [x] 6.18.2 Implement para and co-para lenses ✅ 2022-04-13
+	  - [ ] 6.18.3 Implement errors on the backward part
+  - [x] 6.19 implement server communication with node ✅ 2022-04-13
+  - [ ] 6.20 Implement authentication and caching
+	  - [x] 6.20.1 Implement `+` for Indexed containers ✅ 2022-04-13
+	  - [ ] 6.20.2 Implement "my" indexed containers as a container with a unit parameter
+	  - [ ] 6.20.3 Implement caching with `+` on the output
+  - [x] 6.21 Write definition of server composition language on paper ✅ 2022-07-12
+	  - [x] 6.21.1 Implement the dependently typed language using terms ✅ 2022-07-12
+  - [x] 6.22 Write lenses as update monads and see if we can track effects ✅ 2022-05-19
+	  - NOTE: composition does not work
+  - [x] 6.23 Find monoidal structures on Suspended containers ✅ 2022-07-12
+	  - It's not a category because there is no identity on containers
+  - [ ] 6.24 Find a unifying structure for bidirectional servers
+	  - [ ] 6.24.1 embedd resource lenses into it
+	  - [ ] 6.24.2 embed cache middle ware
+	  - [ ] 6.24.3 embed authentication middleware
 

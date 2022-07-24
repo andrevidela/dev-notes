@@ -39,6 +39,7 @@ Here are the projects I'm currently working on
   - [x] Write abstract for Dependent types talk in March ✅ 2022-02-05
 
 
+
 ## 3 Myrmidon language
   - [x] 3.1 finish the parser (15.11.2021)
   - [x] 3.2 add Nat (14.11.2021)
@@ -103,3 +104,28 @@ Here are the projects I'm currently working on
 
 # 9 Graphics
   - [x] 9.2 Draw logo for myrmidon
+
+# 10 OPLSS
+
+- [ ] Understand and write about W-types
+- [ ] containers <-> Polynomial functors
+	- [ ] Write n-ary functors
+	- [ ] Link up fixpoints of containers with fixpoints of polynomial functors and recover cata from it
+- [ ] Metamorphisms
+	- [ ] Check if stream can use `List` instead of `Maybe` for non-deterministic buffers
+	- [ ] Check if it can work on any `1 + n` functor so you can have non-determinism on trees
+- [ ] Sequent calculus
+	- [ ] Categorical semantics
+	- [ ] implement SC in agda/Idris
+	- [ ] product and co-products aren't symetric???
+- [ ] Reading
+	- [ ] Review Clowns to the left, jokers to the right
+	- [ ] Review Fractional types from Dorchard
+	- [ ] Review Composing Bidirectional programs monadically
+- [ ] Implement Jeremy's paper about breath-first search tree-traversal
+	- Could this be used for a more general version of traversing data structures without respecting their original definitions?
+- [ ] Figure out the link between zippers and lenses
+	- Any link with derivatives?
+- [ ] Merge `oplss` `lenses` and `poly` from `Neko` into `TypesLab`
+- [ ] Merge `oplss` and `state-machines` from algae into `TypesLab`
+- [ ] 

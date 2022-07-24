@@ -23,10 +23,13 @@
     - [ ] 5.7.2 Write about scope checking
   - [x] 5.8 Move updated project into original repository ⏫ ✅ 2022-03-18
     - [x] 5.8.1 Tag Version 0.1 of Open games ✅ 2022-02-09
-    - [ ] 5.8.2 Adapt the directory structure and namespaces of Philipp's fork from old OG Master
-    - [ ] 5.8.3 overwrite master with Philip's updated fork
+    - [x] 5.8.2 Adapt the directory structure and namespaces of Philipp's fork from old OG Master ✅ 2022-06-12
+    - [x] 5.8.3 overwrite master with Philip's updated fork ✅ 2022-06-12
     - [ ] 5.8.4 rewrite Jules' version in terms of the new master
+    - [x] 5.8.5 delete Jules version ✅ 2022-06-12
 
   - [x] 5.9 /!\ implement typed population without implementation ✅ 2022-02-03
-  - [ ] 5.10 implement AMM in terms of new types and deriving via
-    - [ ] 5.10.1 implement testing from State to IO
+  - [x] 5.10 implement AMM in terms of new types and deriving via ✅ 2022-04-22
+    - [x] 5.10.1 implement testing from State to IO ✅ 2022-04-22
+  - [ ] 5.11 move everything to GHC 9.2 on ARM
+  - [ ] Import the given example into Open Games

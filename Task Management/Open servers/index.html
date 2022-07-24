@@ -1,0 +1,799 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>6 Open-Servers - My dev notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-open-servers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My dev notes" class="md-header__button md-logo" aria-label="My dev notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My dev notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6 Open-Servers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My dev notes" class="md-nav__button md-logo" aria-label="My dev notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My dev notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Done%20previously/" class="md-nav__link">
+        Last week
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TASKS/" class="md-nav__link">
+        Projects :
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Todo%20view/" class="md-nav__link">
+        Todo view
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Kanban
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Kanban" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Kanban
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kanban/Writing%20board/" class="md-nav__link">
+        Writing board
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/01.%20Emulating%20exact-usage%20in%20Idris2/" class="md-nav__link">
+        Note nº1: Emulating exact usage in Idris2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/03.%20Getting%20started%20with%20Idris/" class="md-nav__link">
+        Getting started with Idris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/04.%20More%20things%20with%20exact%20usage/" class="md-nav__link">
+        Exact usage and branching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/05.%20Data%20Generic%20Programming/" class="md-nav__link">
+        Data Generic programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/06.%20Lists%2C%20Colists%20and%20Streams/" class="md-nav__link">
+        Differences between `List` `Colist` and `Stream`
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming/07.%20Introduction%20to%20dependent%20types/" class="md-nav__link">
+        07 Introduction to dependent types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Task Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Task Management" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Task Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Control%20room/" class="md-nav__link">
+        Control room
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data%20Generic%20Programming/" class="md-nav__link">
+        7 Data generic programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Graphics/" class="md-nav__link">
+        9 Graphics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Idris%20Profficiency/" class="md-nav__link">
+        8 Idris proefficiency tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mailbox/" class="md-nav__link">
+        Mailbox :
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Myrmidon/" class="md-nav__link">
+        3 Myrmidon language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Open%20Games/" class="md-nav__link">
+        5 OpenGames things
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        6 Open-Servers
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Servers%20Lens%20tutorial/" class="md-nav__link">
+        10 An optic-based webserver library
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="6-open-servers">6 Open-Servers<a class="headerlink" href="#6-open-servers" title="Permanent link">&para;</a></h1>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 6.2 fix the Servant DSL ⏫<ul>
+<li>NOTE: After the changes to the core, the Servant examples won't work anymore</li>
+<li>issue #34</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.5 try out idris-server http server project ✅ 2022-03-14<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.5.1 run locally -- doesn't work ✅ 2021-11-10</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.5.2 Perform the suggested fixes from discord ✅ 2021-11-11</li>
+<li>NOTE: didn't work, missing module: TyTTP.Support.Promise</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.5.2' Perform the suggested fixes from discord ✅ 2022-03-14</li>
+<li>NOTE: Updated info from package author, need to try again!</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.5.3 see if we can interpret LogIO into the node JS server ✅ 2022-03-14</li>
+<li>looks like this is not what we are looking for, the Tyttp library is too high level and the prototype diverged too much from Recombine</li>
+</ul>
+</li>
+<li>[-] ~~6.7 Try out new lenses~~<ul>
+<li>[-] ~~6.7.1 try the dependent van-laarhoven~~</li>
+<li><code>Functor f =&gt; ((i : a) -&gt; {0 b : a -&gt; Type} -&gt; f (b i)) -&gt; (i : s) -&gt; {0 t : s -&gt; Type} -&gt; f (t i)</code></li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> ~~6.8 dependent lenses are morphisms between containers. Comonads are morphisms between directed containers. Can we convert from one to the other?~~<ul>
+<li>Note: they are not directed containers but database might be</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.9 Refactor the <code>PathComp</code> Datatype do get rid of <code>Str</code> constructor and use product and sum ✅ 2022-03-27
+    and <code>String.Singleton</code> instead<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.9.1 remove the use of <code>Product</code> and <code>Sum</code> and replace it with a custom type with suitable ✅ 2022-03-27
+  parsing functions</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.11 Take a look at Matteo's draft of the paper ✅ 2022-02-17</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.12 Allow dependent endpoints ⏫ ✅ 2022-03-14<ul>
+<li>We do not need this anymore</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.13 Tensor in the DSL ⏫ ✅ 2022-02-17<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.13.1 Finish writing the tensor examples ✅ 2022-02-17</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.14 Port indexed interfaces to container interfaces ✅ 2022-03-14<ul>
+<li>Not going to work, it messes up inference</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.15 implement state as action ✅ 2022-03-27<ul>
+<li>issue #44</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.16 implement servers as bidirectional lenses for each endpoints ✅ 2022-03-27<ul>
+<li>issue #42</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.17 finish database example<ul>
+<li>BLOCKED: Need to deal with 6.18 first</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.18 add error management with co-parameter<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.18.1 Implement co-para lenses ✅ 2022-04-13</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.18.2 Implement para and co-para lenses ✅ 2022-04-13</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.18.3 Implement errors on the backward part</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.19 implement server communication with node ✅ 2022-04-13</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.20 Implement authentication and caching<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.20.1 Implement <code>+</code> for Indexed containers ✅ 2022-04-13</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.20.2 Implement "my" indexed containers as a container with a unit parameter</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.20.3 Implement caching with <code>+</code> on the output</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.21 Write definition of server composition language on paper ✅ 2022-07-12<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.21.1 Implement the dependently typed language using terms ✅ 2022-07-12</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.22 Write lenses as update monads and see if we can track effects ✅ 2022-05-19<ul>
+<li>NOTE: composition does not work</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> 6.23 Find monoidal structures on Suspended containers ✅ 2022-07-12<ul>
+<li>It's not a category because there is no identity on containers</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.24 Find a unifying structure for bidirectional servers<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 6.24.1 embedd resource lenses into it</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.24.2 embed cache middle ware</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 6.24.3 embed authentication middleware</li>
+</ul>
+</li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Open%20Games/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5 OpenGames things" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              5 OpenGames things
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Servers%20Lens%20tutorial/" class="md-footer__link md-footer__link--next" aria-label="Next: 10 An optic-based webserver library" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              10 An optic-based webserver library
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

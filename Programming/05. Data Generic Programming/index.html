@@ -1,0 +1,1046 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Data Generic programming - My dev notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-generic-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My dev notes" class="md-header__button md-logo" aria-label="My dev notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My dev notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Generic programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My dev notes" class="md-nav__button md-logo" aria-label="My dev notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My dev notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Done%20previously/" class="md-nav__link">
+        Last week
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TASKS/" class="md-nav__link">
+        Projects :
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Todo%20view/" class="md-nav__link">
+        Todo view
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Kanban
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Kanban" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Kanban
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kanban/Writing%20board/" class="md-nav__link">
+        Writing board
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.%20Emulating%20exact-usage%20in%20Idris2/" class="md-nav__link">
+        Note nº1: Emulating exact usage in Idris2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.%20Getting%20started%20with%20Idris/" class="md-nav__link">
+        Getting started with Idris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.%20More%20things%20with%20exact%20usage/" class="md-nav__link">
+        Exact usage and branching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Data Generic programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Data Generic programming
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-use-a-fold" class="md-nav__link">
+    1. Use a fold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-use-a-loop" class="md-nav__link">
+    2. Use a loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pragmatic-solution" class="md-nav__link">
+    The pragmatic solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-the-generic-version" class="md-nav__link">
+    Solving the generic version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-data-descriptors" class="md-nav__link">
+    Generic data descriptors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-the-generic-split-function" class="md-nav__link">
+    Implementing the generic split function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06.%20Lists%2C%20Colists%20and%20Streams/" class="md-nav__link">
+        Differences between `List` `Colist` and `Stream`
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07.%20Introduction%20to%20dependent%20types/" class="md-nav__link">
+        07 Introduction to dependent types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Task Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Task Management" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Task Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Control%20room/" class="md-nav__link">
+        Control room
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Data%20Generic%20Programming/" class="md-nav__link">
+        7 Data generic programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Graphics/" class="md-nav__link">
+        9 Graphics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Idris%20Profficiency/" class="md-nav__link">
+        8 Idris proefficiency tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Mailbox/" class="md-nav__link">
+        Mailbox :
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Myrmidon/" class="md-nav__link">
+        3 Myrmidon language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Open%20Games/" class="md-nav__link">
+        5 OpenGames things
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Open%20servers/" class="md-nav__link">
+        6 Open-Servers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Task%20Management/Servers%20Lens%20tutorial/" class="md-nav__link">
+        10 An optic-based webserver library
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-use-a-fold" class="md-nav__link">
+    1. Use a fold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-use-a-loop" class="md-nav__link">
+    2. Use a loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pragmatic-solution" class="md-nav__link">
+    The pragmatic solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-the-generic-version" class="md-nav__link">
+    Solving the generic version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-data-descriptors" class="md-nav__link">
+    Generic data descriptors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-the-generic-split-function" class="md-nav__link">
+    Implementing the generic split function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="data-generic-programming">Data Generic programming<a class="headerlink" href="#data-generic-programming" title="Permanent link">&para;</a></h1>
+<p>The other day this tweet showed up.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Q for Swift devs: I have an array of objects. I want to turn it into 3 arrays based on a property of each object. ArrayA = objects with property value A, ArrayB with value B, then objects with any other value for that property in a 3rd array. Any better way than using filter x3?</p>&mdash; Belle 🔔 B. Cooper (@BelleBCooper) <a href="https://twitter.com/BelleBCooper/status/1458196661512011778?ref_src=twsrc%5Etfw">November 9, 2021</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I like those questions because they ask for multiple questions at once:</p>
+<ul>
+<li>What APIs are available to achieve this goal?</li>
+<li>What tradeoffs are available in this particular situation?</li>
+<li>What is the most idiomatic in this language?</li>
+</ul>
+<p>And finding an answer that fits all those questions is quite a challenge</p>
+<p>In this specific instance there seem to have two main solutions:</p>
+<h3 id="1-use-a-fold">1. Use a fold<a class="headerlink" href="#1-use-a-fold" title="Permanent link">&para;</a></h3>
+<p><code>fold</code> is called <code>reduce</code> in switft but the idea is the same:</p>
+<pre><code class="language-swift">func split3&lt;A, S&gt;(arr: S, test: (A) -&gt; Three) -&gt; ([A],[A],[A]) where S: Sequence, S.Element == A {
+    arr.reduce(into: ([],[],[])) { acc, i in
+        switch test(i) {
+        case .first: acc.0.append(i)
+        case .second: acc.1.append(i)
+        case .third: acc.2.append(i)
+        }
+    }
+}
+</code></pre>
+<p>Here i'm using a custom data type <code>Three</code> which has three possible values:</p>
+<pre><code class="language-swift">enum Three: Equatable {
+    case first, second, third
+}
+</code></pre>
+<p>The reduce implementation is using an accumulator of three empty arrays and adds element to the correct one depending on which of the three value the original array maps into.</p>
+<p>This has the benefit to iterate the array only once, it's also a single expression instead of using multiple imperative statements, that meanst that you can't reorder the lines without stopping the program from compiling. The problem is that it's not particularly readable</p>
+<h3 id="2-use-a-loop">2. Use a loop<a class="headerlink" href="#2-use-a-loop" title="Permanent link">&para;</a></h3>
+<p>One of the bread and butters of c programmers is to use loops instead of higher order functions, this situation lends itself very well to a loop since accessing the arrays from within the loop feels very natural:</p>
+<pre><code class="language-swift">
+func splitLoop&lt;A, S&gt;(arr: S, test: (A) -&gt; Three) -&gt; ([A],[A],[A]) where S: Sequence, S.Element == A {
+    var arr1: [A] = []
+    var arr2: [A] = []
+    var arr3: [A] = []
+    for i in arr {
+        switch test(i) {
+        case .first: arr1.append(i)
+        case .second: arr2.append(i)
+        case .third: arr3.append(i)
+        }
+    }
+    return (arr1,arr2,arr3)
+}
+</code></pre>
+<p>This code is a bit longer but is fairly easy to understand, however it's a bit verbose and it introduces a new possible source of errors compared to the previous option: Nothing stops you from returning <code>(arr1, arr1, arr1)</code> or <code>(arr1, arr2, arr1)</code>. Of course that's a trivial bug to fix but not a trivial bug to detect since the compiler won't warn you.</p>
+<h2 id="the-pragmatic-solution">The pragmatic solution<a class="headerlink" href="#the-pragmatic-solution" title="Permanent link">&para;</a></h2>
+<p>Using 3 <code>filter</code> turns out to produce a solution that's short, easy to read and easy to understand:</p>
+<pre><code class="language-swift">func splitFilter&lt;A, S&gt;(arr: S, test: (A) -&gt; Three) -&gt; ([A],[A],[A]) where S: Sequence, S.Element == A {
+    let arr1 = arr.filter { i in test(i) == .first }
+    let arr2 = arr.filter { i in test(i) == .second }
+    let arr3 = arr.filter { i in test(i) == .third }
+    return (arr1, arr2, arr3)
+}
+</code></pre>
+<p>This has the same problem that you can flip around the return value but the rest of the body of the function is really nice to read! It's a bit
+unsatisfying because it traverses the list three times instead of once but you could argue that's just a constant factor in an otherwise
+O(n) solution.</p>
+<h2 id="solving-the-generic-version">Solving the generic version<a class="headerlink" href="#solving-the-generic-version" title="Permanent link">&para;</a></h2>
+<p>The question that popped into my mind was as follow:</p>
+<blockquote>
+<p>if <code>filter</code> allows you to partition your functions in 2, and <code>split</code> partitions our function in 3, is there a version that splits any array into <code>n</code>?</p>
+</blockquote>
+<p>There are many ways of solving this problem but they all involve some sort of gymnasitc to do with meta-programming or macros. Thankfully you need none of that if you use <em>Idris</em>.</p>
+<p>There are two key observations to make to reach a solution:</p>
+<ul>
+<li>We need to be generic over <code>n</code> which will be the number of ways we partition our original array</li>
+<li>We need to be generic over the type of the predicate: It needs to have <code>n</code> different values in order to discriminate which "bucket" each value is going to end up in.</li>
+</ul>
+<p>Using the first observation we know we have to implement a function that looks a bit like this:</p>
+<pre><code>splitN : (n : Nat) -&gt; (pred : a -&gt; ???) -&gt; (ls : List a) -&gt; Vect n (List a)
+</code></pre>
+<ul>
+<li>The first argument <code>n</code> is the number of ways we split our list</li>
+<li><code>pred</code> is the predicate that tells us which "bucket" each element is supposed to land in</li>
+<li><code>ls : List a</code> is the original list we want to split.</li>
+<li><code>Vect n (List a)</code> are our <code>n</code> buckets that contains all the elements from the original list but placed in their corresponding batch.</li>
+</ul>
+<p>I've left the return type of <code>pred</code> a mystery because before I tell you what it is we need to understand what it does. <code>pred</code> is a function that, given any value of the array, tells you "which bucket" the value belongs to. If there are three possible buckets, like in the original tweet, then <code>???</code> must be a type like <code>Three</code> that we saw earlier. But if there are only 2 buckets, then <code>???</code> should be <code>Bool</code>! because we want to split our list into two possible partitions: the one for which <code>pred</code> is true and the one for which <code>pred</code> is false.</p>
+<p>If we are looking to split our array in <code>4</code> then we need a type that has four possible values, and elements that map into the first value will end up in the first bucket, elements that map to the second value end up in the second bucket, etc.</p>
+<p>So that means the <em>type</em> of <code>???</code> is a type that has exactly as many <em>inhabitants</em> (aka as many <em>values</em>) as <code>n</code>.</p>
+<h2 id="generic-data-descriptors">Generic data descriptors<a class="headerlink" href="#generic-data-descriptors" title="Permanent link">&para;</a></h2>
+<p>The following is the foundation of what makes <a href="http://github.com/typedefs/typedefs">Typedefs</a> possible: an algebra of types. This interpretation is given by the wonderful thesis by Peter Morris <em>Constructing Universes for Generic Programming</em> (You can probably find it on the internet if you look hard enough). Long story short we need this data type:</p>
+<pre><code>-- CFT stands for &quot;Context Free Type&quot;
+data CFT : Type where
+
+  -- Void
+  Zero : CFT
+
+  -- Unit
+  One : CFT
+
+  -- Algebraic definitions
+  (+) : (a, b : CFT) -&gt; CFT
+  (*) : (a, b : CFT) -&gt; CFT
+</code></pre>
+<p>(I've eluded variables, application and Mu because they are not used for what we are doing now)</p>
+<p>This data type describes strictly positive types and allows you to build bigger types out of smaller ones. Here <code>Zero</code> represents the type with <code>0</code> inhabitants, and <code>One</code> the type with exactly one value, this is often referred to as the <em>unit type</em>.
+<code>*</code> and <code>+</code> refer to <em>products</em> and <em>coproducts</em> of types, in layman's words, "pairing" of types and "eithering" of types.</p>
+<p>In order to represent a value with 2 in habitants it is enough to write</p>
+<pre><code>Two : CFT
+Two = One + One
+</code></pre>
+<p><code>Three</code> can be defined as <code>Two + One</code>, and <code>Four</code> as <code>Three + One</code> etc. each of them allow you describe a type of exactly the same number of different values as their names. So <code>Two</code> has two possible values.</p>
+<p>We can automate the process by writing a function that converts from <code>Nat</code> to <code>CFT</code> by creating a description for a type with the number of values corresponding to the <code>Nat</code> value:</p>
+<pre><code>TyFromNat : Nat -&gt; CFT
+TyFromNat Z = Zero
+TyFromNat (S k) = One + TyFromNat k
+</code></pre>
+<p>Since <code>CFT</code> is just a <em>description</em> for a type we need to instanciate it as a <code>Type</code> in the host language, Idris:</p>
+<pre><code>data Ty : CFT -&gt; Type where
+  Left : Ty s -&gt; Ty (s + t)
+  Right : Ty t -&gt; Ty (s + t)
+  Unit : Ty One
+  Pair : Ty s -&gt; Ty t -&gt; Ty (s * t)
+</code></pre>
+<p>(Again I've eluded things we don't care about like contexts and Mu)</p>
+<p>This allow us to create values for each of our type descriptions:</p>
+<pre><code class="language-haskell">FunnyBool : Type
+FunnyBool = Ty (TyFromNat 2)
+
+FunnyTrue : FunnyBool
+FunnyTrue = Left Unit
+
+FunnyFalse : FunnyBool
+FunnyFalse = Right (Left Unit)
+
+</code></pre>
+<p>Here <code>Left Unit</code> has type <code>Ty (TyFromNat 2)</code>, you might be confused as to why this means and that's because it means <em>nothing</em>. However, we, as humans, are going to assign the meaning "true" to this value, that's why It's called "FunnyTrue" and has type "funnyBool", same thing for "False"</p>
+<p>Equipped with this power we can defined a function generic over the number of buckets we want to sort our list into, as well as the type of the function necessary in order to select the correct buckets:</p>
+<h2 id="implementing-the-generic-split-function">Implementing the generic split function<a class="headerlink" href="#implementing-the-generic-split-function" title="Permanent link">&para;</a></h2>
+<p>The full type signature makes use of what we've just defined with <code>CFT</code>, <code>TyFromNat</code> and <code>Ty</code>:</p>
+<pre><code class="language-haskell">splitN : (n : Nat) -&gt; (pred : a -&gt; Ty (TyFromNat n)) -&gt; (ls : List a) -&gt; Vect n (List a)
+</code></pre>
+<p>Now we see that the predicate must return a value which precisely tells us which bucket the value ends up in, if <code>n</code> is two then there are two buckets and our function is basically a boolean predicate, if <code>n</code> is three we are in the same position as our original problem.</p>
+<p>The full implementation is fairly straightforward despite the complexity of the type signature. It involves doing nothing when the list is empty, and making a recursive call when it's not. In the recursive case we need to remember to insert the head of the list in the correct bucket, for this we use an auxillary function <code>addToCorrectBucket</code>:</p>
+<pre><code>addToCorrectBucket : (value : a)
+                  -&gt; {n : Nat}
+                  -&gt; (choice : Ty (TyFromNat n) [])
+                  -&gt; (vect : Vect n (List a))
+                  -&gt; Vect n (List a)
+addToCorrectBucket value {n = 0} choice [] = [] -- when there are no buckets
+                                                -- then don't do anything
+addToCorrectBucket value {n = (S k)} (Left Unit) (y :: xs) =
+  (value :: y) :: xs -- if we found the bucket (y), leave the rest of the list
+                     -- as is (xs) , but add the value to the bucket
+addToCorrectBucket value {n = (S k)} (Right x) (y :: xs) =
+  y :: addToCorrectBucket value x xs -- if this bucket (y) is not the correct
+                                     -- bucket then just keep going and don't
+                                     -- modify it
+
+splitN : (n : Nat) -&gt; (pred : a -&gt; Ty (TyFromNat n)) -&gt; (ls : List a) -&gt; Vect n (List a)
+splitN n p [] = replicate n [] -- If we've gone through the entire list
+                               -- retrn `n` empty buckets
+splitN n p (x :: xs) = let check = p x
+                           rec = splitN n p xs in
+                           addToCorrectBucket x check rec
+</code></pre>
+<p>With this we can write a simple test to partition a list in two:</p>
+<pre><code>splitN 2 (fromBool . isEven) [1 .. 4]
+</code></pre>
+<p>(<code>fromBool</code> is just a way to conver from <code>Bool</code> to <code>Ty (TyFromNat 2)</code> so that the types align correctly)</p>
+<p>and we get  <code>[[2,4], [1,3]]</code> as expected.</p>
+<p>Just to make sure I also wrote a test that sorts out polynomial into 3 buckets: the first one if they have 2 real solutions, the second one if they have 1 solution and the last one if they have no solutions:</p>
+<pre><code>record Polynomial where
+  constructor MkPoly
+  x2 : Int -- x squared term
+  x : Int -- x term
+  c : Int -- constant term
+
+-- A polynomial a * x^2 + b * x + c has
+-- 2 solutions if b^2 - 4*a*c &gt; 0
+-- 1 solution if b^2 - 4*a*c === 0
+-- 0 solutions if b^2 - 4*a*c &lt; 0
+solutions : Polynomial -&gt; Ty (TyFromNat 3) []
+solutions (MkPoly a b c) =
+  let v = b * b - 4 * a * c in
+      if v &gt; 0 then Left Unit -- 2 solutions
+               else if v == 0 then Right (Left Unit) -- 1 solution
+               else Right (Right (Left Unit)) -- no solutions
+
+poly1 : Polynomial
+poly1 = MkPoly 2 1 3 -- 0 solutions
+
+poly2 : Polynomial
+poly2 = MkPoly (-1) 2 3 -- 2 solutions
+
+poly3 : Polynomial
+poly3 = MkPoly 1 2 1 -- 1 solution
+
+split3Test : splitN 3 Splits.solutions [Splits.poly1, Splits.poly2, Splits.poly3]
+         === [[Splits.poly2],[Splits.poly3],[Splits.poly1]]
+</code></pre>
+<p>The last line tells us that <code>splitN 3 solutions [poly1, poly2, poly3]</code> indeed sorts each polynomial into the correct bucket:</p>
+<pre><code>[ [poly2] -- 2 solutions
+, [poly3] -- 1 solution
+, [poly1] -- 0 solutions
+]
+</code></pre>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Type descriptions are nice, we can do all sorts of things without having to resort to macros or code-generation. This means we can use the same function for multiple uses. In this instance we could highly optimise our traversal of the list and every call to <code>splitN</code> would benefit from it. It also makes the code a lot more uniform to read since now there is no difference anymore between partitionning in 2, 3 or 4 parts, no need to write special functions for those cases.</p>
+<p>See https://github.com/idris-lang/Idris2/wiki/Types-meta-programming-manifesto for a list of idea of things we can try with them, additionally <a href="http://github.com/typedefs/typedefs">typedefs</a> was written using the same principles.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../04.%20More%20things%20with%20exact%20usage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exact usage and branching" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Exact usage and branching
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../06.%20Lists%2C%20Colists%20and%20Streams/" class="md-footer__link md-footer__link--next" aria-label="Next: Differences between `List` `Colist` and `Stream`" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Differences between `List` `Colist` and `Stream`
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
